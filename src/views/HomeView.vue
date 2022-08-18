@@ -1,18 +1,165 @@
+<script setup>
+// @ is an alias to /src
+import TestimonialCard from "@/components/TestimonialCard.vue";
+</script>
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="home-content-relative-position">
+      <v-row no-gutters dense justify="center">
+        <v-col cols="7">
+          <v-row no-gutters dense justify="center">
+            <v-card variant="outlined" class="video-container">
+              <v-row justify="center" no-gutters dense>
+                <v-btn
+                  style="background-color: rgba(0, 0, 0, 0); z-index: 5"
+                  variant="outlined"
+                  flat
+                  >motion designer, art director and 3d artist</v-btn
+                >
+              </v-row>
+            </v-card>
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row no-gutters dense justify="center">
+        <v-col cols="7">
+          <v-row no-gutters dense justify="space-between">
+            <v-col cols="5" class="pa-0">
+              <v-card variant="outlined" class="other-videos-container">
+              </v-card>
+            </v-col>
+            <v-col cols="5" class="pa-0">
+              <v-card variant="outlined" class="other-videos-container">
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      <!-- <v-row no-gutters dense justify="center" class="latest-jobs-container">
+        <p class="text-white size">LATEST JOBS</p>
+      </v-row> -->
+      <div>
+        <v-row justify="center" align="center" class="intro-about-container">
+          <v-col cols="6">
+            <v-card variant="outlined" style="border-width: 0">
+              <v-row no-gutters dense>
+                <v-col cols="4">
+                  <div class="ma-3 profile-pic-container">
+                    <!-- <v-img
+                      src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+                      cover
+                    ></v-img>-->
+                  </div>
+                </v-col>
+                <v-col cols="8" align-self="center">
+                  <p class="ml-10 my-3 text-white">
+                    Graduated Bachelor of Design in 2009
+                  </p>
+                  <p class="ml-10 my-3 text-white">
+                    Motion designer since 2015
+                  </p>
+                  <p class="ml-10 my-3 text-white">
+                    3d artist in his spare time since 2017
+                  </p>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-col>
+        </v-row>
+        <div class="testimonials-container">
+          <v-row justify="center">
+            <p class="testimonials-text text-white">TESTIMONIALS</p>
+          </v-row>
+          <v-row justify="center" class="testimonials-card-container">
+            <v-col cols="10">
+              <v-row justify="center">
+                <v-col cols="2">
+                  <TestimonialCard></TestimonialCard>
+                </v-col>
+                <v-col cols="2">
+                  <TestimonialCard></TestimonialCard>
+                </v-col>
+                <v-col cols="2">
+                  <TestimonialCard></TestimonialCard>
+                </v-col>
+                <v-col cols="2">
+                  <TestimonialCard></TestimonialCard>
+                </v-col>
+                <v-col cols="2">
+                  <TestimonialCard></TestimonialCard>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
-export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-};
-</script>
+<style>
+.home {
+  background: url("../assets/bg.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 400vh;
+}
+.home-content-relative-position {
+  position: relative;
+  top: 95vh;
+}
+.video-container {
+  width: 100%;
+  height: 550px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  z-index: 0;
+}
+.other-videos-container {
+  max-width: 464x;
+  height: 261px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  margin-top: 15rem;
+}
+.latest-jobs-container {
+  position: relative;
+  top: 20vh;
+}
+.size {
+  font-size: 2em;
+  letter-spacing: 0.5em;
+}
+.testimonials-text {
+  letter-spacing: 0.5em;
+  font-size: 1.6em;
+  margin-top: 9rem;
+}
+.intro-about-container {
+  margin-top: 20rem;
+  height: 31.25rem;
+  background-color: #151515;
+}
+.video-container-text-container {
+  position: relative;
+  bottom: 20px;
+  z-index: 2;
+  overflow: hidden;
+}
+.innertext {
+  display: inline-block;
+}
+.profile-pic-container {
+  width: 14.5rem;
+  height: 19.25rem;
+  background-color: #373737;
+}
+.testimonials-container {
+  height: 31.25rem;
+  background-color: #262626;
+}
+.testimonials-card-container {
+  margin-top: 4rem;
+}
+</style>

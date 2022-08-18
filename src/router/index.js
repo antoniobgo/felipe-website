@@ -1,11 +1,17 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import ThreeD from "../views/ThreeD.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/3d",
+    name: "three-d",
+    component: ThreeD,
   },
   {
     path: "/about",
