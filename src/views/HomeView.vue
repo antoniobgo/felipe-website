@@ -110,7 +110,7 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
   background: url("../assets/bg.png") no-repeat center;
   background-size: cover;
   width: 100%;
-  height: 400vh;
+  height: 375vh;
 }
 .home-content-relative-position {
   position: relative;
