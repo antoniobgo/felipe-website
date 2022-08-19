@@ -12,20 +12,36 @@ const onMotionClick = function () {
 const onContactClick = function () {
   router.push({ name: "contact" });
 };
+const onLogoClick = function () {
+  router.push({ name: "home" });
+};
 </script>
 <template>
   <v-app class="font">
-    <v-app-bar color="#181919" app flat>
-      <v-row class="pl-10" align="center">
-        <div class="logo"></div>
+    <v-app-bar color="#181919" app flat height="62">
+      <v-row class="pl-10" align="center" align-content="center">
+        <v-btn class="mb-3">
+          <div @click="onLogoClick" class="logo"></div>
+        </v-btn>
         <p class="text-white app-bar-text">Felipe Miranda Gomes</p>
-        <v-spacer></v-spacer>
-        <v-btn @click="onMotionClick" class="mx-10 text-white"> Motion </v-btn>
-        <v-btn @click="onThreeDClick" class="mx-10 text-white"> 3D </v-btn>
-        <v-btn @click="onAboutClick" class="mx-10 text-white"> About </v-btn>
-        <v-btn @click="onContactClick" class="mx-10 text-white">
+        <v-spacer />
+        <v-spacer />
+        <v-spacer />
+        <v-spacer />
+        <v-spacer />
+        <v-btn @click="onMotionClick" class="mx-10 font-menu" color="#dbdbdb">
+          Motion
+        </v-btn>
+        <v-btn @click="onThreeDClick" class="mx-10 font-menu" color="#dbdbdb">
+          3D
+        </v-btn>
+        <v-btn @click="onAboutClick" class="mx-10 font-menu" color="#dbdbdb">
+          About
+        </v-btn>
+        <v-btn @click="onContactClick" class="mx-10 font-menu" color="#dbdbdb">
           Contact
         </v-btn>
+        <v-spacer />
       </v-row>
     </v-app-bar>
     <v-main>
@@ -33,11 +49,22 @@ const onContactClick = function () {
     </v-main>
     <v-footer app padless class="footer" absolute>
       <v-row no-gutters justify="center">
-        <v-btn variant="outlined" class="mx-10 text-white"> ue </v-btn>
-        <v-btn class="mx-10 text-white"> 3D </v-btn>
-        <v-btn class="mx-10 text-white"> About </v-btn>
-        <v-btn class="mx-10 text-white"> Contact </v-btn>
-        <v-divider color="#858585" class="my-10" />
+        <v-btn class="pa-0">
+          <div class="linkedin"></div>
+        </v-btn>
+        <v-btn class="pa-0">
+          <div class="ig"></div>
+        </v-btn>
+        <v-btn class="pa-0">
+          <div class="vimeo"></div>
+        </v-btn>
+        <v-btn class="pa-0">
+          <div class="youtube"></div>
+        </v-btn>
+        <v-btn class="pa-0">
+          <div class="dot"></div>
+        </v-btn>
+        <v-divider color="#000000" class="my-10" />
         <v-col cols="12">
           <v-row no-gutters justify="center">
             <p class="email-text">felipearaujodemirandagomes@gmail.com</p>
@@ -52,7 +79,14 @@ const onContactClick = function () {
 .font {
   font-family: Alata, sans-serif;
 }
+.font-menu {
+  color: #dbdbdb;
+  font-size: 0.75rem;
+  letter-spacing: 0.281rem;
+  line-height: 1.035rem;
+}
 .app-bar-text {
+  font-family: Bakbak One, sans-serif;
   font-weight: 500;
   letter-spacing: 0.0892857143em;
   text-indent: 0.0892857143em;
@@ -68,6 +102,31 @@ const onContactClick = function () {
 .footer {
   height: 15rem;
   background-color: #070707;
+}
+.linkedin {
+  background: url("./assets/linkedin.png") no-repeat center fixed;
+  height: 3rem;
+  width: 4rem;
+}
+.youtube {
+  background: url("./assets/youtube.png") no-repeat center fixed;
+  height: 3rem;
+  width: 4rem;
+}
+.vimeo {
+  background: url("./assets/vimeo.png") no-repeat center fixed;
+  height: 3rem;
+  width: 4rem;
+}
+.dot {
+  background: url("./assets/dot.png") no-repeat center fixed;
+  height: 3rem;
+  width: 4rem;
+}
+.ig {
+  background: url("./assets/ig.png") no-repeat center fixed;
+  height: 3rem;
+  width: 4rem;
 }
 .email-text {
   font-size: 1rem;
