@@ -3,24 +3,18 @@
 </script>
 
 <template>
-  <div class="three-d">
-    <v-row justify="center" class="three-d-container" no-gutters>
+  <div class="motion">
+    <v-row justify="center" class="motion-container" no-gutters>
       <v-col cols="8">
         <v-row no-gutters>
-          <p class="title-text">3D</p>
+          <p class="title-text">MOTION</p>
         </v-row>
         <v-row no-gutters class="works-container">
-          <v-col cols="4">
-            <v-card class="card-1 cards-color"></v-card>
-          </v-col>
           <v-col cols="8">
-            <v-card class="card-2 cards-color"></v-card>
-          </v-col>
-          <v-col cols="8">
-            <v-card class="card-3 cards-color"> </v-card>
+            <v-card class="card-3 cards-color"></v-card>
           </v-col>
           <v-col cols="4">
-            <v-card class="card-4 cards-color"> </v-card>
+            <v-card class="card-4 cards-color"></v-card>
           </v-col>
           <v-col cols="4">
             <v-card class="card-1 cards-color"> </v-card>
@@ -36,6 +30,15 @@
           </v-col>
           <v-col cols="8">
             <v-card class="card-3 cards-color"> </v-card>
+          </v-col>
+          <v-col cols="4">
+            <v-card class="card-1 cards-color"> </v-card>
+          </v-col>
+          <v-col cols="4">
+            <v-card class="card-1 cards-color"> </v-card>
+          </v-col>
+          <v-col cols="4">
+            <v-card class="card-1 cards-color"> </v-card>
           </v-col>
         </v-row>
       </v-col>
@@ -44,12 +47,12 @@
 </template>
 
 <style scoped>
-.three-d {
+.motion {
   background-color: #101010;
   width: 100%;
   height: 100%;
 }
-.three-d-container {
+.motion-container {
   padding-top: 5rem;
 }
 .title-text {

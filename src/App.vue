@@ -6,18 +6,26 @@ const onAboutClick = function () {
 const onThreeDClick = function () {
   router.push({ name: "three-d" });
 };
+const onMotionClick = function () {
+  router.push({ name: "motion" });
+};
+const onContactClick = function () {
+  router.push({ name: "contact" });
+};
 </script>
 <template>
-  <v-app>
+  <v-app class="font">
     <v-app-bar color="#181919" app flat>
       <v-row class="pl-10" align="center">
         <div class="logo"></div>
         <p class="text-white app-bar-text">Felipe Miranda Gomes</p>
         <v-spacer></v-spacer>
-        <v-btn class="mx-10 text-white"> Motion </v-btn>
+        <v-btn @click="onMotionClick" class="mx-10 text-white"> Motion </v-btn>
         <v-btn @click="onThreeDClick" class="mx-10 text-white"> 3D </v-btn>
         <v-btn @click="onAboutClick" class="mx-10 text-white"> About </v-btn>
-        <v-btn class="mx-10 text-white"> Contact </v-btn>
+        <v-btn @click="onContactClick" class="mx-10 text-white">
+          Contact
+        </v-btn>
       </v-row>
     </v-app-bar>
     <v-main>
@@ -41,6 +49,9 @@ const onThreeDClick = function () {
 </template>
 
 <style>
+.font {
+  font-family: Alata, sans-serif;
+}
 .app-bar-text {
   font-weight: 500;
   letter-spacing: 0.0892857143em;

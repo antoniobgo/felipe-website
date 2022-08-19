@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ThreeD from "../views/ThreeD.vue";
+import MotionView from "../views/MotionView.vue";
+import ContactView from "../views/ContactView.vue";
 
 const routes = [
   {
@@ -12,6 +14,16 @@ const routes = [
     path: "/3d",
     name: "three-d",
     component: ThreeD,
+  },
+  {
+    path: "/motion",
+    name: "motion",
+    component: MotionView,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: ContactView,
   },
   {
     path: "/about",

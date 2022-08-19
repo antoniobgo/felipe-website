@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .about {
   background-color: #101010;
   width: 100%;
