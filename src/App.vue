@@ -84,6 +84,28 @@ const onLogoClick = function () {
   font-size: 0.75rem;
   letter-spacing: 0.281rem;
   line-height: 1.035rem;
+  font-weight: 400;
+}
+.font-title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.07rem;
+  letter-spacing: 0.75rem;
+  color: #c8c8c8;
+}
+.citation-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.625rem;
+  letter-spacing: 0.125rem;
+  color: #858585;
+}
+.default-text {
+  font-size: 1rem;
+  letter-spacing: 0.156rem;
+  line-height: 2.375rem;
+  color: #858585;
 }
 .app-bar-text {
   font-family: Bakbak One, sans-serif;

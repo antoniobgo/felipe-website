@@ -4,14 +4,14 @@
 
 <template>
   <v-card variant="outlined" class="testimonial-card">
-    <v-card-text class="grey-color">
-      <p>
+    <v-card-text>
+      <p class="citation-text text-center">
         Hdskajlkjasdlksahjdlkjahsdlkjahsdlkjhsalkdjhsalkdhjsaklhjdlkashjhkajdhs.
       </p>
     </v-card-text>
     <v-card-actions class="grey-color">
       <v-row justify="center">
-        <p>Rocha Mormaii Motorsports</p>
+        <p class="citation-text">Rocha Mormaii Motorsports</p>
       </v-row>
     </v-card-actions>
   </v-card>

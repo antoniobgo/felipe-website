@@ -1,5 +1,5 @@
 <script setup>
-// @ is an alias to /src
+import router from "@/router";
 import TestimonialCard from "@/components/TestimonialCard.vue";
 </script>
 
@@ -53,15 +53,22 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
                   </div>
                 </v-col>
                 <v-col cols="8" align-self="center">
-                  <p class="ml-10 my-3 text-white">
+                  <p class="ml-10 my-3 default-text">
                     Graduated Bachelor of Design in 2009
                   </p>
-                  <p class="ml-10 my-3 text-white">
+                  <p class="ml-10 my-3 default-text">
                     Motion designer since 2015
                   </p>
-                  <p class="ml-10 my-3 text-white">
+                  <p class="ml-10 my-3 default-text">
                     3d artist in his spare time since 2017
                   </p>
+                  <v-btn
+                    @click="router.push({ name: 'about' })"
+                    flat
+                    class="ml-10 font-menu about-button"
+                    color="#D2B100"
+                    >ABOUT</v-btn
+                  >
                 </v-col>
               </v-row>
             </v-card>
@@ -69,7 +76,7 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
         </v-row>
         <div class="testimonials-container">
           <v-row justify="center">
-            <p class="testimonials-text text-white">TESTIMONIALS</p>
+            <p class="title-text title-margin">TESTIMONIALS</p>
           </v-row>
           <v-row justify="center" class="testimonials-card-container">
             <v-col cols="10">
@@ -131,9 +138,7 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
   font-size: 2em;
   letter-spacing: 0.5em;
 }
-.testimonials-text {
-  letter-spacing: 0.5em;
-  font-size: 1.6em;
+.title-margin {
   margin-top: 9rem;
 }
 .intro-about-container {
@@ -160,6 +165,11 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
   background-color: #262626;
 }
 .testimonials-card-container {
-  margin-top: 4rem;
+  margin-top: 1rem;
+}
+.about-button {
+  max-width: 6.25rem;
+  max-height: 1.5rem;
+  margin-top: 3rem;
 }
 </style>
