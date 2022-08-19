@@ -67,7 +67,9 @@ const onLogoClick = function () {
         <v-divider color="#000000" class="my-10" />
         <v-col cols="12">
           <v-row no-gutters justify="center">
-            <p class="email-text">felipearaujodemirandagomes@gmail.com</p>
+            <p class="email-text">
+              felipearaujodemirandagomes@gmail.com deploy test
+            </p>
           </v-row>
         </v-col>
       </v-row>
