@@ -65,7 +65,7 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
                   <v-btn
                     @click="router.push({ name: 'about' })"
                     flat
-                    class="ml-10 font-menu about-button"
+                    class="ml-10 font-menu about-button text-black"
                     color="#D2B100"
                     >ABOUT</v-btn
                   >
