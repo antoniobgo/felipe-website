@@ -1,39 +1,51 @@
 <script setup>
+import { ref } from "vue";
 import router from "@/router";
 import TestimonialCard from "@/components/TestimonialCard.vue";
+
+const testimonialsContent = ref([
+  {
+    name: "Rocha",
+    jobTitle: "Mormaii Motorsports",
+    content:
+      "“Um mix de criatividade e sinceridade, adoramos trabalhar com Felipe.”",
+  },
+  {
+    name: "Braz",
+    jobTitle: "Motion Head agência 300",
+    content:
+      "“Muito assertivo nas entregas, boa leitura de briefing, trabalha bem em equipe.”",
+  },
+  {
+    name: "Luiz",
+    jobTitle: "Video editor and vfx job partner",
+    content:
+      "“Grande diretor de arte, motion designer, parceiro para os bons e maus momentos.”",
+  },
+]);
 </script>
 
 <template>
   <div class="home">
-    <div class="home-content-relative-position">
+    <div>
       <v-row no-gutters dense justify="center">
-        <v-col cols="7">
-          <v-row no-gutters dense justify="center">
-            <v-card variant="outlined" class="video-container">
-              <v-row justify="center" no-gutters dense>
-                <v-btn
-                  style="background-color: rgba(0, 0, 0, 0); z-index: 5"
-                  variant="outlined"
-                  flat
-                  >motion designer, art director and 3d artist</v-btn
-                >
-              </v-row>
-            </v-card>
-          </v-row>
+        <v-col cols="6" class="title-margin">
+          <v-card variant="outlined" class="video-container"> </v-card>
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
-        <v-col cols="7">
-          <v-row no-gutters dense justify="space-between">
-            <v-col cols="5" class="pa-0">
-              <v-card variant="outlined" class="other-videos-container">
-              </v-card>
-            </v-col>
-            <v-col cols="5" class="pa-0">
-              <v-card variant="outlined" class="other-videos-container">
-              </v-card>
-            </v-col>
-          </v-row>
+        <v-col cols="6" class="mt-15">
+          <v-card variant="outlined" class="welcome-container"> </v-card>
+        </v-col>
+      </v-row>
+      <v-row no-gutters dense justify="center">
+        <v-col cols="3">
+          <v-card variant="outlined" class="other-videos-container mr-3">
+          </v-card>
+        </v-col>
+        <v-col cols="3">
+          <v-card variant="outlined" class="other-videos-container ml-3">
+          </v-card>
         </v-col>
       </v-row>
       <!-- <v-row no-gutters dense justify="center" class="latest-jobs-container">
@@ -79,24 +91,27 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
             <p class="title-text title-margin">TESTIMONIALS</p>
           </v-row>
           <v-row justify="center" class="testimonials-card-container">
-            <v-col cols="10">
-              <v-row justify="center">
-                <v-col cols="2">
-                  <TestimonialCard></TestimonialCard>
-                </v-col>
-                <v-col cols="2">
-                  <TestimonialCard></TestimonialCard>
-                </v-col>
-                <v-col cols="2">
-                  <TestimonialCard></TestimonialCard>
-                </v-col>
-                <v-col cols="2">
-                  <TestimonialCard></TestimonialCard>
-                </v-col>
-                <v-col cols="2">
-                  <TestimonialCard></TestimonialCard>
-                </v-col>
-              </v-row>
+            <v-col cols="2">
+              <TestimonialCard
+                :testimonialContent="testimonialsContent[0]"
+              ></TestimonialCard>
+            </v-col>
+            <v-col cols="2">
+              <div
+                style="
+                  border-left: solid 1px #747474;
+                  border-right: solid 1px #747474;
+                "
+              >
+                <TestimonialCard
+                  :testimonialContent="testimonialsContent[1]"
+                ></TestimonialCard>
+              </div>
+            </v-col>
+            <v-col cols="2">
+              <TestimonialCard
+                :testimonialContent="testimonialsContent[2]"
+              ></TestimonialCard>
             </v-col>
           </v-row>
         </div>
@@ -107,28 +122,29 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
 
 <style>
 .home {
-  background: url("../assets/bg.png") no-repeat center;
-  background-size: cover;
+  background: url("../assets/bg.png") center;
+  background-size: cover !important;
   width: 100%;
-  height: 375vh;
-}
-.home-content-relative-position {
-  position: relative;
-  top: 95vh;
+  padding-top: 62px;
+  /* height: 100%; */
 }
 .video-container {
-  width: 100%;
   height: 550px;
   border: solid 2px #474543;
   border-radius: 0px;
   z-index: 0;
 }
-.other-videos-container {
-  max-width: 464x;
-  height: 261px;
+.welcome-container {
+  height: 150px;
   border: solid 2px #474543;
   border-radius: 0px;
-  margin-top: 15rem;
+  z-index: 0;
+}
+.other-videos-container {
+  height: 670px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  margin-top: 10px;
 }
 .latest-jobs-container {
   position: relative;
@@ -142,8 +158,8 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
   margin-top: 9rem;
 }
 .intro-about-container {
-  margin-top: 20rem;
-  height: 31.25rem;
+  margin-top: 10rem;
+  height: 470px;
   background-color: #151515;
 }
 .video-container-text-container {
@@ -161,8 +177,8 @@ import TestimonialCard from "@/components/TestimonialCard.vue";
   background-color: #373737;
 }
 .testimonials-container {
-  height: 31.25rem;
-  background-color: #262626;
+  height: 470px;
+  background-color: #121212;
 }
 .testimonials-card-container {
   margin-top: 1rem;

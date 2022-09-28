@@ -1,19 +1,25 @@
 <script setup>
-// @ is an alias to /src
+import { ref, defineProps } from "vue";
+
+const props = defineProps(["testimonialContent"]);
+const testimonialContent = ref(props.testimonialContent);
 </script>
 
 <template>
   <v-card variant="outlined" class="testimonial-card">
     <v-card-text>
       <p class="citation-text text-center">
-        Hdskajlkjasdlksahjdlkjahsdlkjahsdlkjhsalkdjhsalkdhjsaklhjdlkashjhkajdhs.
+        {{ testimonialContent.content }}
       </p>
     </v-card-text>
-    <v-card-actions class="grey-color">
+    <div class="grey-color">
       <v-row justify="center">
-        <p class="citation-text">Rocha Mormaii Motorsports</p>
+        <p class="citation-text">{{ testimonialContent.name }}</p>
       </v-row>
-    </v-card-actions>
+      <v-row justify="center">
+        <p class="citation-text">{{ testimonialContent.jobTitle }}</p>
+      </v-row>
+    </div>
   </v-card>
 </template>
 
