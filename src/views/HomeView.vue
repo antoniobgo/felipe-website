@@ -30,12 +30,41 @@ const testimonialsContent = ref([
     <div>
       <v-row no-gutters dense justify="center">
         <v-col cols="6" class="title-margin">
-          <v-card variant="outlined" class="video-container"> </v-card>
+          <div class="video-container">
+            <div class="video-internal-container">
+              <iframe
+                src="https://www.youtube.com/embed/50ELR5bF5QY"
+                frameborder="0"
+                style="height: 100%; width: 100%"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="6" class="mt-15">
-          <v-card variant="outlined" class="welcome-container"> </v-card>
+          <v-card variant="outlined" class="welcome-container">
+            <v-row
+              no-gutters
+              dense
+              justify="center"
+              class="h-100"
+              align="center"
+            >
+              <v-col cols="10" align-self="center">
+                <p class="text-center welcome-text">WELCOME TO MY PORTFOLIO!</p>
+                <p class="text-center welcome-text">
+                  Here you will find my main works of motion design, art
+                  direction and 3d artist.
+                </p>
+                <p class="text-center welcome-text">
+                  And you can check my full profile on the about page.
+                </p>
+              </v-col>
+            </v-row>
+          </v-card>
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
@@ -129,16 +158,30 @@ const testimonialsContent = ref([
   /* height: 100%; */
 }
 .video-container {
+  position: relative;
   height: 550px;
   border: solid 2px #474543;
   border-radius: 0px;
-  z-index: 0;
+}
+.video-internal-container {
+  width: 100%;
+  height: 100%;
+  background-clip: content-box; /* support: IE9+ */
+  /* background-color: #ccc; */
+  padding: 10px 10px 10px 10px !important;
+}
+.videoreel-row {
+  width: 95%;
+  height: 95%;
 }
 .welcome-container {
   height: 150px;
   border: solid 2px #474543;
   border-radius: 0px;
   z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #15150e 0%, #0b0a03 100%);
+  padding: 10px;
+  background-clip: content-box;
 }
 .other-videos-container {
   height: 670px;
@@ -150,26 +193,13 @@ const testimonialsContent = ref([
   position: relative;
   top: 20vh;
 }
-.size {
-  font-size: 2em;
-  letter-spacing: 0.5em;
-}
 .title-margin {
-  margin-top: 9rem;
+  margin-top: 5rem;
 }
 .intro-about-container {
   margin-top: 10rem;
   height: 470px;
   background-color: #151515;
-}
-.video-container-text-container {
-  position: relative;
-  bottom: 20px;
-  z-index: 2;
-  overflow: hidden;
-}
-.innertext {
-  display: inline-block;
 }
 .profile-pic-container {
   width: 14.5rem;

@@ -64,12 +64,10 @@ const onLogoClick = function () {
         <v-btn class="pa-0">
           <div class="dot"></div>
         </v-btn>
-        <v-divider color="#000000" class="my-10" />
-        <v-col cols="12">
-          <v-row no-gutters justify="center">
-            <p class="email-text">felipearaujodemirandagomes@gmail.com</p>
-          </v-row>
-        </v-col>
+        <v-divider color="#000000" class="my-5" />
+        <v-row no-gutters justify="center">
+          <p class="email-text">felipearaujodemirandagomes@gmail.com</p>
+        </v-row>
       </v-row>
     </v-footer>
   </v-app>
@@ -77,7 +75,14 @@ const onLogoClick = function () {
 
 <style>
 .font {
-  font-family: Alata, sans-serif;
+  font-family: "Alata", sans-serif !important;
+}
+.welcome-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.44rem;
+  letter-spacing: 0.13rem;
+  color: #cdcdcd;
 }
 .font-menu {
   color: #dbdbdb;
@@ -122,7 +127,7 @@ const onLogoClick = function () {
   width: 3rem;
 }
 .footer {
-  height: 15rem;
+  height: 345px;
   background-color: #070707;
 }
 .linkedin {
