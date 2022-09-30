@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import router from "@/router";
+// import router from "@/router";
 import TestimonialCard from "@/components/TestimonialCard.vue";
 
 const testimonialsContent = ref([
@@ -45,7 +45,7 @@ const testimonialsContent = ref([
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="6" class="mt-15">
-          <v-card variant="outlined" class="welcome-container">
+          <v-card class="welcome-container">
             <v-row
               no-gutters
               dense
@@ -69,55 +69,48 @@ const testimonialsContent = ref([
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="3">
-          <v-card variant="outlined" class="motion-video-container mr-3">
+          <v-card class="motion-video-container mr-3">
             <v-row class="h-100" no-gutters dense justify="center">
               <v-col align-self="center">
-                <p class="video-text text-center">MOTION</p>
+                <p class="video-text text-center text-yellow">MOTION</p>
               </v-col>
             </v-row>
           </v-card>
         </v-col>
         <v-col cols="3">
-          <v-card variant="outlined" class="threed-video-container ml-3">
+          <v-card class="threed-video-container ml-3">
             <v-row class="h-100" no-gutters dense justify="center">
               <v-col align-self="center">
-                <p class="video-text text-center">3D</p>
+                <p class="video-text text-center text-yellow">3D</p>
               </v-col>
             </v-row>
           </v-card>
         </v-col>
       </v-row>
-      <!-- <v-row no-gutters dense justify="center" class="latest-jobs-container">
-        <p class="text-white size">LATEST JOBS</p>
-      </v-row> -->
       <div>
-        <v-row justify="center" align="center" class="intro-about-container">
-          <v-col cols="12" class="h-100">
-            <v-card class="h-100" variant="outlined" style="border-width: 0">
-              <v-row class="h-100" no-gutters dense justify="center">
-                <v-col cols="3">
-                  <div class="profile-pic-container"></div>
-                </v-col>
-                <v-col cols="4" align-self="center">
-                  <p class="ml-10 mb-10 second-title-text">EXPERIENCE</p>
-                  <p class="ml-10 default-text">Visual Designer since 2006</p>
-                  <p class="ml-10 default-text">Motion designer since 2015</p>
-                  <p class="ml-10 default-text">
-                    3d artist in his spare time since 2017
-                  </p>
-                  <p class="ml-10 default-text">UX designer since 2021</p>
-                  <v-btn
-                    @click="router.push({ name: 'about' })"
-                    flat
-                    class="ml-10 font-menu about-button text-black"
-                    color="#D2B100"
-                    >ABOUT</v-btn
-                  >
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-col>
-        </v-row>
+        <div style="height: 470px" class="intro-about-container">
+          <v-row class="h-100" justify="center">
+            <v-col cols="3">
+              <div class="profile-pic-container"></div>
+            </v-col>
+            <v-col cols="4" align-self="center">
+              <p class="ml-10 mb-10 second-title-text">EXPERIENCE</p>
+              <p class="ml-10 default-text">Visual Designer since 2006</p>
+              <p class="ml-10 default-text">Motion designer since 2015</p>
+              <p class="ml-10 default-text">
+                3d artist in his spare time since 2017
+              </p>
+              <p class="ml-10 default-text">UX designer since 2021</p>
+              <v-btn
+                @click="router.push({ name: 'about' })"
+                flat
+                class="ml-10 font-menu about-button text-black"
+                color="#D2B100"
+                >ABOUT</v-btn
+              >
+            </v-col>
+          </v-row>
+        </div>
         <div class="testimonials-container">
           <v-row justify="center">
             <p class="second-title-text title-margin">TESTIMONIALS</p>
@@ -158,7 +151,7 @@ const testimonialsContent = ref([
   background-size: cover !important;
   width: 100%;
   padding-top: 62px;
-  /* height: 100%; */
+  height: 100%;
 }
 .video-container {
   position: relative;
@@ -194,6 +187,7 @@ const testimonialsContent = ref([
   margin-top: 10px;
   background-clip: content-box;
   padding: 10px;
+  filter: brightness(50%);
 }
 .motion-video-container {
   background: url("../assets/motion_bg.png");
@@ -203,6 +197,7 @@ const testimonialsContent = ref([
   margin-top: 10px;
   background-clip: content-box;
   padding: 10px;
+  filter: brightness(50%);
 }
 .latest-jobs-container {
   position: relative;
@@ -214,12 +209,13 @@ const testimonialsContent = ref([
 .intro-about-container {
   margin-top: 10rem;
   height: 470px;
-  background-color: #151515;
+  background: url("../assets/experience_bg.png");
 }
 .profile-pic-container {
   width: 100%;
   height: 100%;
   background: url("../assets/experience_profile.png");
+  background-size: cover;
 }
 .testimonials-container {
   height: 470px;

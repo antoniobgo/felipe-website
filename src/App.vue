@@ -88,7 +88,6 @@ const onLogoClick = function () {
   font-size: 1.875rem;
   line-height: 4.563rem;
   letter-spacing: 0.163rem;
-  color: #d2b100;
 }
 .font-menu {
   color: #dbdbdb;
