@@ -25,8 +25,8 @@ const testimonialContent = ref(props.testimonialContent);
 
 <style>
 .testimonial-card {
-  /* width: 12.3rem; */
-  height: 9rem;
+  /* width: 250px; */
+  height: 200px;
   border-width: 0;
 }
 .grey-color {

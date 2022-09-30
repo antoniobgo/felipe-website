@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-// import router from "@/router";
+import router from "@/router";
 import TestimonialCard from "@/components/TestimonialCard.vue";
 
 const testimonialsContent = ref([
@@ -69,22 +69,68 @@ const testimonialsContent = ref([
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="3">
-          <v-card class="motion-video-container mr-3">
-            <v-row class="h-100" no-gutters dense justify="center">
-              <v-col align-self="center">
-                <p class="video-text text-center text-yellow">MOTION</p>
-              </v-col>
-            </v-row>
-          </v-card>
+          <v-hover v-slot="{ isHovering, props }">
+            <v-card
+              @click="router.push({ name: 'motion' })"
+              class="mr-3"
+              :class="
+                isHovering
+                  ? 'motion-video-container-onhover'
+                  : 'motion-video-container'
+              "
+              v-bind="props"
+            >
+              <v-row class="h-100" no-gutters dense justify="center">
+                <v-col cols="12" align-self="end">
+                  <p class="video-text text-center text-yellow">MOTION</p>
+                </v-col>
+                <v-col cols="12" align-self="end">
+                  <div v-show="isHovering" class="onhover-area">
+                    <v-row no-gutters dense justify="center">
+                      <v-col cols="10">
+                        <p class="text-center small-card-font mt-3">
+                          Softwares: After Effects, Premier, Ilustrator and
+                          photoshop
+                        </p>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-hover>
         </v-col>
         <v-col cols="3">
-          <v-card class="threed-video-container ml-3">
-            <v-row class="h-100" no-gutters dense justify="center">
-              <v-col align-self="center">
-                <p class="video-text text-center text-yellow">3D</p>
-              </v-col>
-            </v-row>
-          </v-card>
+          <v-hover v-slot="{ isHovering, props }">
+            <v-card
+              @click="router.push({ name: 'three-d' })"
+              class="ml-3"
+              :class="
+                isHovering
+                  ? 'threed-video-container-onhover'
+                  : 'threed-video-container'
+              "
+              v-bind="props"
+            >
+              <v-row class="h-100" no-gutters dense justify="center">
+                <v-col cols="12" align-self="end">
+                  <p class="video-text text-center text-yellow">3D</p>
+                </v-col>
+                <v-col cols="12" align-self="end">
+                  <div v-show="isHovering" class="onhover-area">
+                    <v-row no-gutters dense justify="center">
+                      <v-col cols="10">
+                        <p class="text-center small-card-font mt-3">
+                          Softwares: Blender and Unreal, Photoshop and After
+                          Efects for post.
+                        </p>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-hover>
         </v-col>
       </v-row>
       <div>
@@ -126,6 +172,8 @@ const testimonialsContent = ref([
                 style="
                   border-left: solid 1px #747474;
                   border-right: solid 1px #747474;
+                  padding-left: 10px;
+                  padding-right: 10px;
                 "
               >
                 <TestimonialCard
@@ -180,24 +228,44 @@ const testimonialsContent = ref([
   background-clip: content-box;
 }
 .threed-video-container {
-  background: url("../assets/threed_bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/threed_bg.png");
   height: 670px;
   border: solid 2px #474543;
   border-radius: 0px;
   margin-top: 10px;
   background-clip: content-box;
   padding: 8px;
-  filter: brightness(50%);
+}
+.threed-video-container-onhover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../assets/threed_bg.png");
+  height: 670px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  margin-top: 10px;
+  background-clip: content-box;
+  padding: 8px;
 }
 .motion-video-container {
-  background: url("../assets/motion_bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url("../assets/motion_bg.png");
   height: 670px;
   border: solid 2px #474543;
   border-radius: 0px;
   margin-top: 10px;
   background-clip: content-box;
   padding: 8px;
-  filter: brightness(50%);
+}
+.motion-video-container-onhover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../assets/motion_bg.png");
+  height: 670px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  margin-top: 10px;
+  background-clip: content-box;
+  padding: 8px;
 }
 .latest-jobs-container {
   position: relative;
@@ -217,6 +285,10 @@ const testimonialsContent = ref([
   background: url("../assets/experience_profile.png");
   background-size: cover;
 }
+.onhover-area {
+  height: 108px;
+  background-color: rgba(210, 177, 0, 0.66);
+}
 .testimonials-container {
   height: 470px;
   background-color: #121212;
@@ -226,6 +298,7 @@ const testimonialsContent = ref([
 }
 .testimonial-margin {
   margin-top: 7rem;
+  margin-bottom: 2.5rem;
 }
 .about-button {
   max-width: 6.25rem;

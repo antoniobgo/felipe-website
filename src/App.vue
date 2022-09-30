@@ -86,7 +86,7 @@ const onLogoClick = function () {
 }
 .video-text {
   font-size: 1.875rem;
-  line-height: 4.563rem;
+  line-height: 2rem;
   letter-spacing: 0.163rem;
 }
 .font-menu {
@@ -95,6 +95,11 @@ const onLogoClick = function () {
   letter-spacing: 0.281rem;
   line-height: 1.035rem;
   font-weight: 400;
+}
+.small-card-font {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.113rem;
 }
 .second-title-text {
   font-size: 1.5rem;
