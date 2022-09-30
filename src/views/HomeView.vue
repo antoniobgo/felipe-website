@@ -113,7 +113,7 @@ const testimonialsContent = ref([
         </div>
         <div class="testimonials-container">
           <v-row justify="center">
-            <p class="second-title-text title-margin">TESTIMONIALS</p>
+            <p class="second-title-text testimonial-margin">TESTIMONIALS</p>
           </v-row>
           <v-row justify="center" class="testimonials-card-container">
             <v-col cols="2">
@@ -164,7 +164,7 @@ const testimonialsContent = ref([
   height: 100%;
   background-clip: content-box; /* support: IE9+ */
   /* background-color: #ccc; */
-  padding: 10px 10px 10px 10px !important;
+  padding: 8px;
 }
 .videoreel-row {
   width: 95%;
@@ -176,7 +176,7 @@ const testimonialsContent = ref([
   border-radius: 0px;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, #15150e 0%, #0b0a03 100%);
-  padding: 10px;
+  padding: 8px;
   background-clip: content-box;
 }
 .threed-video-container {
@@ -186,7 +186,7 @@ const testimonialsContent = ref([
   border-radius: 0px;
   margin-top: 10px;
   background-clip: content-box;
-  padding: 10px;
+  padding: 8px;
   filter: brightness(50%);
 }
 .motion-video-container {
@@ -196,7 +196,7 @@ const testimonialsContent = ref([
   border-radius: 0px;
   margin-top: 10px;
   background-clip: content-box;
-  padding: 10px;
+  padding: 8px;
   filter: brightness(50%);
 }
 .latest-jobs-container {
@@ -223,6 +223,9 @@ const testimonialsContent = ref([
 }
 .testimonials-card-container {
   margin-top: 1rem;
+}
+.testimonial-margin {
+  margin-top: 7rem;
 }
 .about-button {
   max-width: 6.25rem;
