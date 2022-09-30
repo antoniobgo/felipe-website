@@ -69,11 +69,21 @@ const testimonialsContent = ref([
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="3">
-          <v-card variant="outlined" class="other-videos-container mr-3">
+          <v-card variant="outlined" class="motion-video-container mr-3">
+            <v-row class="h-100" no-gutters dense justify="center">
+              <v-col align-self="center">
+                <p class="video-text text-center">MOTION</p>
+              </v-col>
+            </v-row>
           </v-card>
         </v-col>
         <v-col cols="3">
-          <v-card variant="outlined" class="other-videos-container ml-3">
+          <v-card variant="outlined" class="threed-video-container ml-3">
+            <v-row class="h-100" no-gutters dense justify="center">
+              <v-col align-self="center">
+                <p class="video-text text-center">3D</p>
+              </v-col>
+            </v-row>
           </v-card>
         </v-col>
       </v-row>
@@ -82,27 +92,20 @@ const testimonialsContent = ref([
       </v-row> -->
       <div>
         <v-row justify="center" align="center" class="intro-about-container">
-          <v-col cols="6">
-            <v-card variant="outlined" style="border-width: 0">
-              <v-row no-gutters dense>
-                <v-col cols="4">
-                  <div class="ma-3 profile-pic-container">
-                    <!-- <v-img
-                      src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-                      cover
-                    ></v-img>-->
-                  </div>
+          <v-col cols="12" class="h-100">
+            <v-card class="h-100" variant="outlined" style="border-width: 0">
+              <v-row class="h-100" no-gutters dense justify="center">
+                <v-col cols="3">
+                  <div class="profile-pic-container"></div>
                 </v-col>
-                <v-col cols="8" align-self="center">
-                  <p class="ml-10 my-3 default-text">
-                    Graduated Bachelor of Design in 2009
-                  </p>
-                  <p class="ml-10 my-3 default-text">
-                    Motion designer since 2015
-                  </p>
-                  <p class="ml-10 my-3 default-text">
+                <v-col cols="4" align-self="center">
+                  <p class="ml-10 mb-10 second-title-text">EXPERIENCE</p>
+                  <p class="ml-10 default-text">Visual Designer since 2006</p>
+                  <p class="ml-10 default-text">Motion designer since 2015</p>
+                  <p class="ml-10 default-text">
                     3d artist in his spare time since 2017
                   </p>
+                  <p class="ml-10 default-text">UX designer since 2021</p>
                   <v-btn
                     @click="router.push({ name: 'about' })"
                     flat
@@ -117,7 +120,7 @@ const testimonialsContent = ref([
         </v-row>
         <div class="testimonials-container">
           <v-row justify="center">
-            <p class="title-text title-margin">TESTIMONIALS</p>
+            <p class="second-title-text title-margin">TESTIMONIALS</p>
           </v-row>
           <v-row justify="center" class="testimonials-card-container">
             <v-col cols="2">
@@ -183,11 +186,23 @@ const testimonialsContent = ref([
   padding: 10px;
   background-clip: content-box;
 }
-.other-videos-container {
+.threed-video-container {
+  background: url("../assets/threed_bg.png");
   height: 670px;
   border: solid 2px #474543;
   border-radius: 0px;
   margin-top: 10px;
+  background-clip: content-box;
+  padding: 10px;
+}
+.motion-video-container {
+  background: url("../assets/motion_bg.png");
+  height: 670px;
+  border: solid 2px #474543;
+  border-radius: 0px;
+  margin-top: 10px;
+  background-clip: content-box;
+  padding: 10px;
 }
 .latest-jobs-container {
   position: relative;
@@ -202,9 +217,9 @@ const testimonialsContent = ref([
   background-color: #151515;
 }
 .profile-pic-container {
-  width: 14.5rem;
-  height: 19.25rem;
-  background-color: #373737;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/experience_profile.png");
 }
 .testimonials-container {
   height: 470px;

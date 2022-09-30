@@ -75,14 +75,20 @@ const onLogoClick = function () {
 
 <style>
 .font {
-  font-family: "Alata", sans-serif !important;
+  font-family: "Alata", sans-serif;
 }
 .welcome-text {
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.44rem;
   letter-spacing: 0.13rem;
   color: #cdcdcd;
+}
+.video-text {
+  font-size: 1.875rem;
+  line-height: 4.563rem;
+  letter-spacing: 0.163rem;
+  color: #d2b100;
 }
 .font-menu {
   color: #dbdbdb;
@@ -90,6 +96,12 @@ const onLogoClick = function () {
   letter-spacing: 0.281rem;
   line-height: 1.035rem;
   font-weight: 400;
+}
+.second-title-text {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  line-height: 2.063rem;
+  color: #c8c8c8;
 }
 .font-title {
   font-weight: 400;
@@ -109,7 +121,7 @@ const onLogoClick = function () {
 .default-text {
   font-size: 1rem;
   letter-spacing: 0.156rem;
-  line-height: 2.375rem;
+  line-height: 2rem;
   color: #858585;
 }
 .app-bar-text {
