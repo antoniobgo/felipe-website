@@ -11,14 +11,14 @@ console.log(job);
 const styleObject = ref({
   backgroundImage:
     "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), " +
-    `url(${require("@/assets/images/motion/" + job.value.backgroundUrl)})`,
+    `url(${require("@/assets/images/" + job.value.backgroundUrl)})`,
   minHeight: cardHeight.value + "px",
   backgroundSize: "cover",
 });
 const onHoverStyleObject = ref({
   backgroundImage:
     "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), " +
-    `url(${require("@/assets/images/motion/" + job.value.backgroundUrl)})`,
+    `url(${require("@/assets/images/" + job.value.backgroundUrl)})`,
   minHeight: cardHeight.value + "px",
   backgroundSize: "cover",
 });

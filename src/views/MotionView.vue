@@ -6,137 +6,145 @@ const portfolioItems = [
     jobName: "MOTION HUD",
     jobCompany: "Agência 300",
     softwareText: "Software: After Effects",
-    backgroundUrl: "motion_hud.png",
+    backgroundUrl: "motion/motion_hud.png",
   },
   {
     jobName: "RUNNING CYCLES",
     jobCompany: "Autoral test character animation",
     softwareText: "Software: After Effects",
-    backgroundUrl: "running.png",
+    backgroundUrl: "motion/running.png",
   },
   {
     jobName: "APPS LAUNCH CAMPAIGN",
     jobCompany: "Hughueir APS",
     softwareText:
       "Softwares: After Effects, Premiere, Photoshop and Illustrator",
-    backgroundUrl: "launch_app.png",
+    backgroundUrl: "motion/launch_app.png",
   },
   {
     jobName: "WAKE UP",
     jobCompany: "Illustration and Animation Authorial",
     softwareText: "Softwares: After Effects, Premiere and Illustrator",
-    backgroundUrl: "wakeup.png",
+    backgroundUrl: "motion/wakeup.png",
   },
   {
     jobName: "PRICE OFFERS VIDEO",
     jobCompany: "Led Outdoor",
     softwareText: "Softwares: C4D, After Effects",
-    backgroundUrl: "imperatriz.png",
+    backgroundUrl: "motion/imperatriz.png",
   },
   {
     jobName: "PRE-LAUNCH VIDEO MARFARÁ",
     jobCompany: "Agencia 300",
     softwareText: "Software: After Effects",
-    backgroundUrl: "marfara.png",
+    backgroundUrl: "motion/marfara.png",
   },
   {
     jobName: "SCRIPT, EDITION AND MOTION",
     jobCompany: "Plaza Jardim",
     softwareText: "Softwares: Premiere and After Effects",
-    backgroundUrl: "plaza.png",
+    backgroundUrl: "motion/plaza.png",
   },
   {
     jobName: "ADVERTISING CAMPAIGN",
     jobCompany: "Oliveira Imóveis",
     softwareText: "Softwares: After Effects and Illustrator",
-    backgroundUrl: "oliveira.png",
+    backgroundUrl: "motion/oliveira.png",
   },
   {
     jobName: "NARRATIVA INSPIRA MOVIMENTAR",
     jobCompany: "Autoral",
     softwareText: "Softwares: Illustrator, Photoshop and After Effects",
-    backgroundUrl: "capa_motion.png",
+    backgroundUrl: "motion/capa_motion.png",
   },
   {
     jobName: "MOTION EVENT",
     jobCompany: "Creative Led",
     softwareText: "Softwares: Illustrator and After Effects",
-    backgroundUrl: "duelo.png",
+    backgroundUrl: "motion/duelo.png",
   },
   {
     jobName: "MOTION AND VISUAL IDENTITY",
     jobCompany: "Essência don Campo",
     softwareText: "Softwares: Illustrator, Photoshop and After Effects",
-    backgroundUrl: "essencia_do_campo.png",
+    backgroundUrl: "motion/essencia_do_campo.png",
   },
   {
     jobName: "MOTION LOGO",
     jobCompany: "Rosane Dutra",
     softwareText: "Softwares: After Effects",
-    backgroundUrl: "rosane.png",
+    backgroundUrl: "motion/rosane.png",
   },
 ];
 </script>
 
 <template>
   <div class="motion">
-    <v-row justify="center" class="motion-container" no-gutters dense>
-      <v-col cols="9">
-        <v-row no-gutters dense justify="center">
-          <v-col cols="8">
-            <v-row no-gutters dense justify="start">
-              <p class="title-text">MOTION</p>
-            </v-row>
-            <v-row>
-              <v-col cols="8">
-                <PortfolioCard :job="portfolioItems[0]" :cardHeight="310" />
-              </v-col>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[1]" :cardHeight="310" />
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[2]" :cardHeight="444" />
-              </v-col>
-              <v-col cols="8">
-                <PortfolioCard :job="portfolioItems[3]" :cardHeight="444" />
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[4]" :cardHeight="310" />
-              </v-col>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[5]" :cardHeight="310" />
-              </v-col>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[6]" :cardHeight="310" />
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="4">
-                <PortfolioCard :job="portfolioItems[7]" :cardHeight="310" />
-              </v-col>
-              <v-col cols="8">
-                <PortfolioCard :job="portfolioItems[8]" :cardHeight="310" />
-              </v-col>
+    <div class="">
+      <v-row justify="center" class="motion-container" no-gutters dense>
+        <v-col cols="9">
+          <v-row no-gutters dense justify="center">
+            <v-col cols="8">
+              <v-row no-gutters dense justify="start">
+                <p class="title-text">MOTION</p>
+              </v-row>
               <v-row>
-                <v-col cols="4">
-                  <PortfolioCard :job="portfolioItems[9]" :cardHeight="310" />
+                <v-col cols="8">
+                  <PortfolioCard :job="portfolioItems[0]" :cardHeight="310" />
                 </v-col>
                 <v-col cols="4">
-                  <PortfolioCard :job="portfolioItems[10]" :cardHeight="310" />
-                </v-col>
-                <v-col cols="4">
-                  <PortfolioCard :job="portfolioItems[11]" :cardHeight="310" />
+                  <PortfolioCard :job="portfolioItems[1]" :cardHeight="310" />
                 </v-col>
               </v-row>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <PortfolioCard :job="portfolioItems[2]" :cardHeight="444" />
+                </v-col>
+                <v-col cols="8">
+                  <PortfolioCard :job="portfolioItems[3]" :cardHeight="444" />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <PortfolioCard :job="portfolioItems[4]" :cardHeight="310" />
+                </v-col>
+                <v-col cols="4">
+                  <PortfolioCard :job="portfolioItems[5]" :cardHeight="310" />
+                </v-col>
+                <v-col cols="4">
+                  <PortfolioCard :job="portfolioItems[6]" :cardHeight="310" />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <PortfolioCard :job="portfolioItems[7]" :cardHeight="310" />
+                </v-col>
+                <v-col cols="8">
+                  <PortfolioCard :job="portfolioItems[8]" :cardHeight="310" />
+                </v-col>
+                <v-row>
+                  <v-col cols="4">
+                    <PortfolioCard :job="portfolioItems[9]" :cardHeight="310" />
+                  </v-col>
+                  <v-col cols="4">
+                    <PortfolioCard
+                      :job="portfolioItems[10]"
+                      :cardHeight="310"
+                    />
+                  </v-col>
+                  <v-col cols="4">
+                    <PortfolioCard
+                      :job="portfolioItems[11]"
+                      :cardHeight="310"
+                    />
+                  </v-col>
+                </v-row>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
 
@@ -148,6 +156,7 @@ const portfolioItems = [
 }
 .motion-container {
   padding-top: 5rem;
+  margin-bottom: 10rem;
 }
 .title-text {
   font-family: Alata, sans-serif;
@@ -165,9 +174,9 @@ const portfolioItems = [
 .description-container {
   padding-top: 2rem;
 }
-.card-1 {
+.fuckingtest {
   /* width: 19.3rem; */
-  height: 27.7rem;
+  margin-bottom: 200px;
 }
 .card-2 {
   /* width: 40rem; */
