@@ -22,28 +22,46 @@ const onLogoClick = function () {
 <template>
   <v-app class="font">
     <v-app-bar color="#181919" app flat height="64">
-      <div class="d-flex justify-space-between w-100">
-        <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-1'">
+      <div class="d-flex w-100" :class="mdAndUp ? 'justify-space-between' : ''">
+        <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-5'">
           <div @click="onLogoClick" class="logo"></div>
-          <p class="pl-4 text-white app-bar-text">Felipe Miranda Gomes</p>
+          <p v-if="mdAndUp" class="pl-4 text-white app-bar-text">
+            Felipe Miranda Gomes
+          </p>
         </div>
         <div
-          class="d-flex justify-space-around align-center"
-          :class="mdAndUp ? 'mr-10' : 'mr-1'"
+          class="d-flex align-center"
+          :class="mdAndUp ? 'mr-10 justify-space-around' : 'mr-1'"
         >
-          <v-btn @click="onMotionClick" class="mx-10 font-menu" color="#dbdbdb">
+          <v-btn
+            @click="onMotionClick"
+            :class="mdAndUp ? 'mx-10 font-menu' : 'smaller-font-menu'"
+            color="#dbdbdb"
+            :size="mdAndUp ? '' : 'small'"
+          >
             Motion
           </v-btn>
-          <v-btn @click="onThreeDClick" class="mx-10 font-menu" color="#dbdbdb">
+          <v-btn
+            @click="onThreeDClick"
+            :class="mdAndUp ? 'mx-10 font-menu' : 'smaller-font-menu'"
+            color="#dbdbdb"
+            :size="mdAndUp ? '' : 'small'"
+          >
             3D
           </v-btn>
-          <v-btn @click="onAboutClick" class="mx-10 font-menu" color="#dbdbdb">
+          <v-btn
+            @click="onAboutClick"
+            :class="mdAndUp ? 'mx-10 font-menu' : 'smaller-font-menu'"
+            color="#dbdbdb"
+            :size="mdAndUp ? '' : 'small'"
+          >
             About
           </v-btn>
           <v-btn
             @click="onContactClick"
-            class="mx-10 font-menu"
+            :class="mdAndUp ? 'mx-10 font-menu' : 'smaller-font-menu'"
             color="#dbdbdb"
+            :size="mdAndUp ? '' : 'small'"
           >
             Contact
           </v-btn>
@@ -130,6 +148,13 @@ const onLogoClick = function () {
   font-size: 0.75rem;
   letter-spacing: 0.281rem;
   line-height: 1.035rem;
+  font-weight: 400;
+}
+.smaller-font-menu {
+  color: #dbdbdb;
+  font-size: 0.5rem;
+  letter-spacing: 0.281rem;
+  line-height: 0.68rem;
   font-weight: 400;
 }
 .small-card-font {
