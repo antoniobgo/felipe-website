@@ -21,7 +21,7 @@ const onLogoClick = function () {
 </script>
 <template>
   <v-app class="font">
-    <v-app-bar color="#181919" app flat height="62">
+    <v-app-bar color="#181919" app flat height="64">
       <div class="d-flex justify-space-between w-100">
         <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-1'">
           <div @click="onLogoClick" class="logo"></div>
@@ -111,6 +111,12 @@ const onLogoClick = function () {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.44rem;
+  letter-spacing: 0.13rem;
+  color: #cdcdcd;
+}
+.smaller-welcome-text {
+  font-size: 0.625rem;
+  line-height: 1.03rem;
   letter-spacing: 0.13rem;
   color: #cdcdcd;
 }

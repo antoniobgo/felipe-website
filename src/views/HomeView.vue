@@ -31,7 +31,7 @@ const testimonialsContent = ref([
   <div class="home">
     <div>
       <v-row no-gutters dense justify="center">
-        <v-col cols="10" md="6" class="title-margin">
+        <v-col cols="11" md="6" class="title-margin">
           <div
             class="video-container"
             :class="mdAndUp ? 'desktop-height' : 'mobile-height'"
@@ -49,93 +49,106 @@ const testimonialsContent = ref([
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
-        <v-col cols="10" md="6" class="mt-15">
+        <v-col cols="11" md="6" :class="mdAndUp ? 'mt-15' : 'mt-5'">
           <v-card class="welcome-container">
-            <v-row
-              no-gutters
-              dense
-              justify="center"
-              class="h-100"
-              align="center"
-            >
-              <v-col cols="10" align-self="center">
-                <p class="text-center welcome-text">WELCOME TO MY PORTFOLIO!</p>
-                <p class="text-center welcome-text">
-                  Here you will find my main works of motion design, art
-                  direction and 3d artist.
-                </p>
-                <p class="text-center welcome-text">
-                  And you can check my full profile on the about page.
-                </p>
+            <v-row justify="center" class="h-100" align="center">
+              <v-col cols="12" align-self="center">
+                <div class="pt-3">
+                  <p class="pb-3 text-center welcome-text">
+                    WELCOME TO MY PORTFOLIO!
+                  </p>
+                  <p
+                    class="text-center"
+                    :class="mdAndUp ? 'welcome-text' : 'smaller-welcome-text'"
+                  >
+                    Here you will find my main works of motion design, art
+                    direction and 3d artist.
+                  </p>
+                  <p
+                    class="text-center"
+                    :class="mdAndUp ? 'welcome-text' : 'smaller-welcome-text'"
+                  >
+                    And you can check my full profile on the about page.
+                  </p>
+                </div>
               </v-col>
             </v-row>
           </v-card>
         </v-col>
       </v-row>
-      <v-row no-gutters dense justify="center">
-        <v-col cols="10" md="3">
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card
-              @click="router.push({ name: 'motion' })"
-              class="mr-3"
-              :class="
-                isHovering
-                  ? 'motion-video-container-onhover'
-                  : 'motion-video-container'
-              "
-              v-bind="props"
-            >
-              <v-row class="h-100" no-gutters dense justify="center">
-                <v-col cols="12" align-self="end">
-                  <p class="video-text text-center text-yellow">MOTION</p>
-                </v-col>
-                <v-col cols="12" align-self="end">
-                  <div v-show="isHovering" class="onhover-area">
-                    <v-row no-gutters dense justify="center">
-                      <v-col cols="10">
-                        <p class="text-center small-card-font mt-3">
-                          Softwares: After Effects, Premier, Ilustrator and
-                          photoshop
-                        </p>
-                      </v-col>
-                    </v-row>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-hover>
+      <v-row
+        no-gutters
+        dense
+        justify="center"
+        :class="mdAndUp ? 'mt-15' : 'mt-5'"
+      >
+        <v-col cols="11" md="3">
+          <div :class="mdAndUp ? 'mr-3' : ''">
+            <v-hover v-slot="{ isHovering, props }">
+              <v-card
+                @click="router.push({ name: 'motion' })"
+                :height="mdAndUp ? '670px' : '150px'"
+                :class="
+                  isHovering
+                    ? 'motion-video-container-onhover'
+                    : 'motion-video-container'
+                "
+                v-bind="props"
+              >
+                <v-row class="h-100" no-gutters dense justify="center">
+                  <v-col cols="12" align-self="end">
+                    <p class="video-text text-center text-yellow">MOTION</p>
+                  </v-col>
+                  <v-col cols="12" align-self="end">
+                    <div v-show="isHovering" class="onhover-area">
+                      <v-row no-gutters dense justify="center">
+                        <v-col cols="10">
+                          <p class="text-center small-card-font mt-3">
+                            Softwares: After Effects, Premier, Ilustrator and
+                            photoshop
+                          </p>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-hover>
+          </div>
         </v-col>
-        <v-col cols="10" md="3">
-          <v-hover v-slot="{ isHovering, props }">
-            <v-card
-              @click="router.push({ name: 'three-d' })"
-              class="ml-3"
-              :class="
-                isHovering
-                  ? 'threed-video-container-onhover'
-                  : 'threed-video-container'
-              "
-              v-bind="props"
-            >
-              <v-row class="h-100" no-gutters dense justify="center">
-                <v-col cols="12" align-self="end">
-                  <p class="video-text text-center text-yellow">3D</p>
-                </v-col>
-                <v-col cols="12" align-self="end">
-                  <div v-show="isHovering" class="onhover-area">
-                    <v-row no-gutters dense justify="center">
-                      <v-col cols="10">
-                        <p class="text-center small-card-font mt-3">
-                          Softwares: Blender and Unreal, Photoshop and After
-                          Efects for post.
-                        </p>
-                      </v-col>
-                    </v-row>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-card>
-          </v-hover>
+        <v-col cols="11" md="3">
+          <div :class="mdAndUp ? 'ml-3' : ''">
+            <v-hover v-slot="{ isHovering, props }">
+              <v-card
+                @click="router.push({ name: 'three-d' })"
+                :height="mdAndUp ? '670px' : '150px'"
+                :class="
+                  isHovering
+                    ? 'threed-video-container-onhover'
+                    : 'threed-video-container'
+                "
+                v-bind="props"
+              >
+                <v-row class="h-100" no-gutters dense justify="center">
+                  <v-col cols="12" align-self="end">
+                    <p class="video-text text-center text-yellow">3D</p>
+                  </v-col>
+                  <v-col cols="12" align-self="end">
+                    <div v-show="isHovering" class="onhover-area">
+                      <v-row no-gutters dense justify="center">
+                        <v-col cols="10">
+                          <p class="text-center small-card-font mt-3">
+                            Softwares: Blender and Unreal, Photoshop and After
+                            Efects for post.
+                          </p>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-hover>
+          </div>
         </v-col>
       </v-row>
       <div>
@@ -203,7 +216,6 @@ const testimonialsContent = ref([
   background: url("../assets/bg.png") center;
   background-size: cover !important;
   width: 100%;
-  padding-top: 62px;
   height: 100%;
 }
 .video-container {
@@ -215,7 +227,7 @@ const testimonialsContent = ref([
   height: 550px;
 }
 .mobile-height {
-  height: 250px;
+  height: 176px;
 }
 .video-internal-container {
   width: 100%;
@@ -260,7 +272,6 @@ const testimonialsContent = ref([
 .motion-video-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
     url("../assets/motion_bg.png");
-  height: 670px;
   border: solid 2px #474543;
   border-radius: 0px;
   margin-top: 10px;
@@ -270,7 +281,6 @@ const testimonialsContent = ref([
 .motion-video-container-onhover {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../assets/motion_bg.png");
-  height: 670px;
   border: solid 2px #474543;
   border-radius: 0px;
   margin-top: 10px;
