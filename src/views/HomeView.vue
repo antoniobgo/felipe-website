@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from "vue";
 import router from "@/router";
+import { useDisplay } from "vuetify";
 import TestimonialCard from "@/components/TestimonialCard.vue";
 
+const { mdAndUp } = useDisplay();
 const testimonialsContent = ref([
   {
     name: "Rocha",
@@ -29,8 +31,11 @@ const testimonialsContent = ref([
   <div class="home">
     <div>
       <v-row no-gutters dense justify="center">
-        <v-col cols="6" class="title-margin">
-          <div class="video-container">
+        <v-col cols="10" md="6" class="title-margin">
+          <div
+            class="video-container"
+            :class="mdAndUp ? 'desktop-height' : 'mobile-height'"
+          >
             <div class="video-internal-container">
               <iframe
                 src="https://www.youtube.com/embed/50ELR5bF5QY"
@@ -44,7 +49,7 @@ const testimonialsContent = ref([
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
-        <v-col cols="6" class="mt-15">
+        <v-col cols="10" md="6" class="mt-15">
           <v-card class="welcome-container">
             <v-row
               no-gutters
@@ -68,7 +73,7 @@ const testimonialsContent = ref([
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
-        <v-col cols="3">
+        <v-col cols="10" md="3">
           <v-hover v-slot="{ isHovering, props }">
             <v-card
               @click="router.push({ name: 'motion' })"
@@ -100,7 +105,7 @@ const testimonialsContent = ref([
             </v-card>
           </v-hover>
         </v-col>
-        <v-col cols="3">
+        <v-col cols="10" md="3">
           <v-hover v-slot="{ isHovering, props }">
             <v-card
               @click="router.push({ name: 'three-d' })"
@@ -203,9 +208,14 @@ const testimonialsContent = ref([
 }
 .video-container {
   position: relative;
-  height: 550px;
   border: solid 2px #474543;
   border-radius: 0px;
+}
+.desktop-height {
+  height: 550px;
+}
+.mobile-height {
+  height: 250px;
 }
 .video-internal-container {
   width: 100%;

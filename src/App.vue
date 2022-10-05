@@ -1,5 +1,8 @@
 <script setup>
 import router from "@/router";
+import { useDisplay } from "vuetify";
+
+const { mdAndUp } = useDisplay();
 const onAboutClick = function () {
   router.push({ name: "about" });
 };
@@ -19,7 +22,34 @@ const onLogoClick = function () {
 <template>
   <v-app class="font">
     <v-app-bar color="#181919" app flat height="62">
-      <v-row class="pl-10" align="center" align-content="center">
+      <div class="d-flex justify-space-between w-100">
+        <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-1'">
+          <div @click="onLogoClick" class="logo"></div>
+          <p class="pl-4 text-white app-bar-text">Felipe Miranda Gomes</p>
+        </div>
+        <div
+          class="d-flex justify-space-around align-center"
+          :class="mdAndUp ? 'mr-10' : 'mr-1'"
+        >
+          <v-btn @click="onMotionClick" class="mx-10 font-menu" color="#dbdbdb">
+            Motion
+          </v-btn>
+          <v-btn @click="onThreeDClick" class="mx-10 font-menu" color="#dbdbdb">
+            3D
+          </v-btn>
+          <v-btn @click="onAboutClick" class="mx-10 font-menu" color="#dbdbdb">
+            About
+          </v-btn>
+          <v-btn
+            @click="onContactClick"
+            class="mx-10 font-menu"
+            color="#dbdbdb"
+          >
+            Contact
+          </v-btn>
+        </div>
+      </div>
+      <!-- <v-row class="pl-10" align="center" align-content="center">
         <v-btn class="mb-3">
           <div @click="onLogoClick" class="logo"></div>
         </v-btn>
@@ -42,7 +72,7 @@ const onLogoClick = function () {
           Contact
         </v-btn>
         <v-spacer />
-      </v-row>
+      </v-row> -->
     </v-app-bar>
     <v-main>
       <router-view />
@@ -139,8 +169,11 @@ const onLogoClick = function () {
 }
 .logo {
   background: url("./assets/logo.svg") no-repeat center fixed;
-  height: 3rem;
-  width: 3rem;
+  height: 62px;
+  width: 35px;
+}
+.logo:hover {
+  cursor: pointer;
 }
 .footer {
   height: 345px;
