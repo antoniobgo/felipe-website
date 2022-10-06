@@ -159,61 +159,75 @@ const testimonialsContent = ref([
               : 'intro-about-container-mobile'
           "
         >
-          <v-row dense no-gutters class="h-100" justify="center">
+          <v-row class="h-100" justify="center">
             <v-col cols="7" md="3">
               <div class="profile-pic-container"></div>
             </v-col>
             <v-col cols="5" md="4" align-self="center">
-              <p
-                :class="
-                  mdAndUp
-                    ? 'ml-10 mb-10 second-title-text'
-                    : 'mb-3 smaller-second-title-text'
-                "
-              >
-                EXPERIENCE
-              </p>
-              <p
-                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
-              >
-                Visual Designer since 2006
-              </p>
-              <p
-                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
-              >
-                Motion designer since 2015
-              </p>
-              <p
-                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
-              >
-                3d artist in his spare time since 2017
-              </p>
-              <p
-                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
-              >
-                UX designer since 2021
-              </p>
-              <v-btn
-                @click="router.push({ name: 'about' })"
-                flat
-                class="ml-10 font-menu about-button text-black"
-                color="#D2B100"
-                >ABOUT</v-btn
-              >
+              <div :class="mdAndUp ? '' : 'pt-3 pr-3'">
+                <p
+                  :class="
+                    mdAndUp
+                      ? 'ml-10 mb-10 second-title-text'
+                      : 'mb-3 smaller-second-title-text'
+                  "
+                >
+                  EXPERIENCE
+                </p>
+                <p
+                  :class="
+                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                  "
+                >
+                  Visual Designer since 2006
+                </p>
+                <p
+                  :class="
+                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                  "
+                >
+                  Motion designer since 2015
+                </p>
+                <p
+                  :class="
+                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                  "
+                >
+                  3d artist in his spare time since 2017
+                </p>
+                <p
+                  :class="
+                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                  "
+                >
+                  UX designer since 2021
+                </p>
+                <v-btn
+                  @click="router.push({ name: 'about' })"
+                  flat
+                  class="font-menu about-button text-black"
+                  :class="mdAndUp ? 'ml-10 mt-10' : 'mt-3'"
+                  color="#D2B100"
+                  >ABOUT</v-btn
+                >
+              </div>
             </v-col>
           </v-row>
         </div>
-        <div class="testimonials-container">
+        <div
+          class="testimonials-container"
+          :class="mdAndUp ? 'testimonials-desktop-height' : ''"
+        >
           <v-row justify="center">
             <p class="second-title-text testimonial-margin">TESTIMONIALS</p>
           </v-row>
           <v-row justify="center" class="testimonials-card-container">
-            <v-col cols="2">
+            <v-col cols="12" md="2">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[0]"
               ></TestimonialCard>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="12" md="2">
               <div
                 style="
                   border-left: solid 1px #747474;
@@ -227,7 +241,7 @@ const testimonialsContent = ref([
                 ></TestimonialCard>
               </div>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="12" md="2">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[2]"
               ></TestimonialCard>
@@ -344,8 +358,13 @@ const testimonialsContent = ref([
   background-color: rgba(210, 177, 0, 0.66);
 }
 .testimonials-container {
-  height: 470px;
   background-color: #121212;
+}
+.testimonials-mobile-height {
+  height: 580px;
+}
+.testimonials-desktop-height {
+  height: 470px;
 }
 .testimonials-card-container {
   margin-top: 1rem;
@@ -357,6 +376,5 @@ const testimonialsContent = ref([
 .about-button {
   max-width: 6.25rem;
   max-height: 1.5rem;
-  margin-top: 3rem;
 }
 </style>

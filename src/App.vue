@@ -67,30 +67,6 @@ const onLogoClick = function () {
           </v-btn>
         </div>
       </div>
-      <!-- <v-row class="pl-10" align="center" align-content="center">
-        <v-btn class="mb-3">
-          <div @click="onLogoClick" class="logo"></div>
-        </v-btn>
-        <p class="text-white app-bar-text">Felipe Miranda Gomes</p>
-        <v-spacer />
-        <v-spacer />
-        <v-spacer />
-        <v-spacer />
-        <v-spacer />
-        <v-btn @click="onMotionClick" class="mx-10 font-menu" color="#dbdbdb">
-          Motion
-        </v-btn>
-        <v-btn @click="onThreeDClick" class="mx-10 font-menu" color="#dbdbdb">
-          3D
-        </v-btn>
-        <v-btn @click="onAboutClick" class="mx-10 font-menu" color="#dbdbdb">
-          About
-        </v-btn>
-        <v-btn @click="onContactClick" class="mx-10 font-menu" color="#dbdbdb">
-          Contact
-        </v-btn>
-        <v-spacer />
-      </v-row> -->
     </v-app-bar>
     <v-main>
       <router-view />
@@ -247,9 +223,8 @@ const onLogoClick = function () {
   width: 4rem;
 }
 .email-text {
-  font-size: 1rem;
-  font-family: "Alata", sans-serif;
-  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.09rem;
   color: #858585;
 }
 </style>
