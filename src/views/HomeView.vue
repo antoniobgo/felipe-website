@@ -233,12 +233,10 @@ const testimonialsContent = ref([
             </v-col>
             <v-col cols="12" md="2">
               <div
-                style="
-                  border-left: solid 1px #747474;
-                  border-right: solid 1px #747474;
-                  padding-left: 10px;
-                  padding-right: 10px;
+                :class="
+                  mdAndUp ? 'testimonial-border' : 'testimonial-mobile-border'
                 "
+                class="pl-3 pr-3"
               >
                 <TestimonialCard
                   :testimonialContent="testimonialsContent[1]"
@@ -380,5 +378,13 @@ const testimonialsContent = ref([
 .about-button {
   max-width: 6.25rem;
   max-height: 1.5rem;
+}
+.testimonial-border {
+  border-left: solid 1px #747474;
+  border-right: solid 1px #747474;
+}
+.testimonial-mobile-border {
+  border-top: solid 1px #747474;
+  border-bottom: solid 1px #747474;
 }
 </style>
