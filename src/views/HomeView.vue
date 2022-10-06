@@ -159,7 +159,7 @@ const testimonialsContent = ref([
               : 'intro-about-container-mobile'
           "
         >
-          <v-row class="h-100" justify="center">
+          <v-row no-gutters class="h-100" justify="center">
             <v-col cols="7" md="3">
               <div class="profile-pic-container"></div>
             </v-col>
@@ -218,10 +218,14 @@ const testimonialsContent = ref([
           class="testimonials-container"
           :class="mdAndUp ? 'testimonials-desktop-height' : ''"
         >
-          <v-row justify="center">
+          <v-row no-gutters justify="center">
             <p class="second-title-text testimonial-margin">TESTIMONIALS</p>
           </v-row>
-          <v-row justify="center" class="testimonials-card-container">
+          <v-row
+            no-gutters
+            justify="center"
+            class="testimonials-card-container"
+          >
             <v-col cols="12" md="2">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[0]"

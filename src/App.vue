@@ -22,7 +22,10 @@ const onLogoClick = function () {
 <template>
   <v-app class="font">
     <v-app-bar color="#181919" app flat height="64">
-      <div class="d-flex w-100" :class="mdAndUp ? 'justify-space-between' : ''">
+      <div
+        class="d-flex w-100"
+        :class="mdAndUp ? 'justify-space-between' : 'justify-space-between'"
+      >
         <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-5'">
           <div @click="onLogoClick" class="logo"></div>
           <p v-if="mdAndUp" class="pl-4 text-white app-bar-text">
@@ -31,7 +34,7 @@ const onLogoClick = function () {
         </div>
         <div
           class="d-flex align-center"
-          :class="mdAndUp ? 'mr-10 justify-space-around' : 'mr-2 ml-2'"
+          :class="mdAndUp ? 'mr-10 justify-space-around' : 'mr-5 ml-2'"
         >
           <v-btn
             @click="onMotionClick"
@@ -45,7 +48,7 @@ const onLogoClick = function () {
             @click="onThreeDClick"
             :class="mdAndUp ? 'mx-10 font-menu' : 'smaller-font-menu'"
             color="#dbdbdb"
-            :size="mdAndUp ? '' : 'small'"
+            :size="mdAndUp ? '' : 'x-small'"
           >
             3D
           </v-btn>
