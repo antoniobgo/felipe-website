@@ -152,19 +152,47 @@ const testimonialsContent = ref([
         </v-col>
       </v-row>
       <div>
-        <div style="height: 470px" class="intro-about-container">
-          <v-row class="h-100" justify="center">
-            <v-col cols="3">
+        <div
+          :class="
+            mdAndUp
+              ? 'intro-about-container-desktop'
+              : 'intro-about-container-mobile'
+          "
+        >
+          <v-row dense no-gutters class="h-100" justify="center">
+            <v-col cols="7" md="3">
               <div class="profile-pic-container"></div>
             </v-col>
-            <v-col cols="4" align-self="center">
-              <p class="ml-10 mb-10 second-title-text">EXPERIENCE</p>
-              <p class="ml-10 default-text">Visual Designer since 2006</p>
-              <p class="ml-10 default-text">Motion designer since 2015</p>
-              <p class="ml-10 default-text">
+            <v-col cols="5" md="4" align-self="center">
+              <p
+                :class="
+                  mdAndUp
+                    ? 'ml-10 mb-10 second-title-text'
+                    : 'mb-3 smaller-second-title-text'
+                "
+              >
+                EXPERIENCE
+              </p>
+              <p
+                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
+              >
+                Visual Designer since 2006
+              </p>
+              <p
+                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
+              >
+                Motion designer since 2015
+              </p>
+              <p
+                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
+              >
                 3d artist in his spare time since 2017
               </p>
-              <p class="ml-10 default-text">UX designer since 2021</p>
+              <p
+                :class="mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'"
+              >
+                UX designer since 2021
+              </p>
               <v-btn
                 @click="router.push({ name: 'about' })"
                 flat
@@ -294,10 +322,16 @@ const testimonialsContent = ref([
 .title-margin {
   margin-top: 5rem;
 }
-.intro-about-container {
+.intro-about-container-desktop {
   margin-top: 10rem;
-  height: 470px;
   background: url("../assets/experience_bg.png");
+  height: 470px;
+}
+.intro-about-container-mobile {
+  padding-top: 3px;
+  margin-top: 10px;
+  background: black;
+  height: 230px;
 }
 .profile-pic-container {
   width: 100%;

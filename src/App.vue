@@ -31,7 +31,7 @@ const onLogoClick = function () {
         </div>
         <div
           class="d-flex align-center"
-          :class="mdAndUp ? 'mr-10 justify-space-around' : 'mr-1'"
+          :class="mdAndUp ? 'mr-10 justify-space-around' : 'mr-2 ml-2'"
         >
           <v-btn
             @click="onMotionClick"
@@ -168,6 +168,12 @@ const onLogoClick = function () {
   line-height: 2.063rem;
   color: #c8c8c8;
 }
+.smaller-second-title-text {
+  font-size: 0.875rem;
+  letter-spacing: 0.271rem;
+  line-height: 1.2rem;
+  color: #c8c8c8;
+}
 .font-title {
   font-weight: 400;
   font-size: 1.5rem;
@@ -187,6 +193,11 @@ const onLogoClick = function () {
   font-size: 1rem;
   letter-spacing: 0.156rem;
   line-height: 2rem;
+  color: #858585;
+}
+.smaller-default-text {
+  font-size: 0.6rem;
+  line-height: 1.125rem;
   color: #858585;
 }
 .app-bar-text {
