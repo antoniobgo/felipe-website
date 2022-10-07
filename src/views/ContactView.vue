@@ -67,7 +67,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .contact {
   background-color: #101010;
   width: 100%;
