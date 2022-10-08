@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import SkillLine from "@/components/SkillLine.vue";
 import SoftwareLine from "@/components/SoftwareLine.vue";
+import PretensionItem from "@/components/PretensionItem.vue";
 
 const portugueseValue = ref(95);
 const englishValue = ref(70);
@@ -79,6 +80,16 @@ const softwares = ref([
     title: "Unreal",
     iconPath: "unreal.png",
   },
+]);
+
+const pretensions = ref([
+  "FILMS",
+  "GAMES",
+  "ARCHITECTURE",
+  "ART",
+  "3D PRODUCT",
+  "ENVIRONMENT",
+  "ANIMATION",
 ]);
 </script>
 
@@ -208,8 +219,65 @@ const softwares = ref([
                     />
                   </div>
                 </v-col>
-              </v-row></div
-          ></v-col>
+              </v-row>
+            </div>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="12">
+        <v-row
+          no-gutters
+          justify="center"
+          dense
+          class="pretensions-performance-container"
+        >
+          <v-col cols="6">
+            <v-row no-gutters dense class="mt-15">
+              <v-col cols="6">
+                <p class="about-title-text">Pretencions</p>
+                <div class="pretensions-list-container">
+                  <PretensionItem
+                    v-for="item in pretensions"
+                    :key="item"
+                    :title="item"
+                    class="my-2"
+                  ></PretensionItem>
+                </div>
+              </v-col>
+              <v-col cols="6">
+                <p class="about-title-text">Current performance</p>
+                <ul class="pl-5 mt-8">
+                  <li class="description-text">
+                    <p>Commercial and institutional video editions</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Animated logos & lowerthirds</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Infographics animation</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Video clip editing</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Cinemagraphics and gifs</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Creative visual for social networks</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Ilustration for helmets</p>
+                  </li>
+                  <li class="description-text">
+                    <p>3d modeling/rendering</p>
+                  </li>
+                  <li class="description-text">
+                    <p>UX design</p>
+                  </li>
+                </ul>
+              </v-col>
+            </v-row>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>
@@ -254,5 +322,12 @@ const softwares = ref([
   min-width: 173px;
   min-height: 156px;
   background-image: url("../assets/about_pic.png");
+}
+.pretensions-performance-container {
+  height: 540px;
+  background: #0b0b0b;
+}
+.pretensions-list-container {
+  margin-top: 30px;
 }
 </style>
