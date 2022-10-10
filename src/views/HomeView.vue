@@ -88,10 +88,15 @@ const testimonialsContent = ref([
               <v-card
                 @click="router.push({ name: 'motion' })"
                 :height="mdAndUp ? '670px' : '150px'"
+                class="video-container"
                 :class="
                   isHovering
-                    ? 'motion-video-container-onhover'
-                    : 'motion-video-container'
+                    ? mdAndUp
+                      ? 'motion-video-container-onhover'
+                      : 'motion-video-container-onhover-mobile'
+                    : mdAndUp
+                    ? 'motion-video-container'
+                    : 'motion-video-container-mobile'
                 "
                 v-bind="props"
               >
@@ -122,10 +127,15 @@ const testimonialsContent = ref([
               <v-card
                 @click="router.push({ name: 'three-d' })"
                 :height="mdAndUp ? '670px' : '150px'"
+                class="video-container"
                 :class="
                   isHovering
-                    ? 'threed-video-container-onhover'
-                    : 'threed-video-container'
+                    ? mdAndUp
+                      ? 'threed-video-container-onhover'
+                      : 'threed-video-container-onhover-mobile'
+                    : mdAndUp
+                    ? 'threed-video-container'
+                    : 'threed-video-container-mobile'
                 "
                 v-bind="props"
               >
@@ -293,43 +303,45 @@ const testimonialsContent = ref([
   padding: 8px;
   background-clip: content-box;
 }
+.video-container {
+  border-radius: 0px;
+  margin-top: 10px;
+  padding: 8px;
+  border: solid 2px #474543;
+  background-clip: content-box;
+}
 .threed-video-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/threed_bg.png");
-  height: 670px;
-  border: solid 2px #474543;
-  border-radius: 0px;
-  margin-top: 10px;
-  background-clip: content-box;
-  padding: 8px;
 }
 .threed-video-container-onhover {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../assets/threed_bg.png");
-  height: 670px;
-  border: solid 2px #474543;
-  border-radius: 0px;
-  margin-top: 10px;
-  background-clip: content-box;
-  padding: 8px;
 }
+.threed-video-container-mobile {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/threed_bg_mobile.png");
+}
+.threed-video-container-onhover-mobile {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../assets/threed_bg_mobile.png");
+}
+
 .motion-video-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
     url("../assets/motion_bg.png");
-  border: solid 2px #474543;
-  border-radius: 0px;
-  margin-top: 10px;
-  background-clip: content-box;
-  padding: 8px;
 }
 .motion-video-container-onhover {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url("../assets/motion_bg.png");
-  border: solid 2px #474543;
-  border-radius: 0px;
-  margin-top: 10px;
-  background-clip: content-box;
-  padding: 8px;
+}
+.motion-video-container-mobile {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url("../assets/motion_bg_mobile.png");
+}
+.motion-video-container-onhover-mobile {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../assets/motion_bg_mobile.png");
 }
 .latest-jobs-container {
   position: relative;
