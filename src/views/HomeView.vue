@@ -161,7 +161,7 @@ const testimonialsContent = ref([
           </div>
         </v-col>
       </v-row>
-      <div>
+      <div style="blackground: black">
         <div
           :class="
             mdAndUp
@@ -226,22 +226,34 @@ const testimonialsContent = ref([
         </div>
         <div
           class="testimonials-container"
-          :class="mdAndUp ? 'testimonials-desktop-height' : ''"
+          :class="
+            mdAndUp
+              ? 'testimonials-desktop-height'
+              : 'testimonials-mobile-height'
+          "
         >
           <v-row no-gutters justify="center">
-            <p class="second-title-text testimonial-margin">TESTIMONIALS</p>
+            <p
+              :class="
+                mdAndUp
+                  ? 'second-title-text testimonial-margin-desktop'
+                  : 'testimonial-title-mobile testimonial-margin-mobile'
+              "
+            >
+              TESTIMONIALS
+            </p>
           </v-row>
           <v-row
             no-gutters
             justify="center"
             class="testimonials-card-container"
           >
-            <v-col cols="12" md="2">
+            <v-col cols="7" md="3">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[0]"
               ></TestimonialCard>
             </v-col>
-            <v-col cols="12" md="2">
+            <v-col cols="7" md="3">
               <div
                 :class="
                   mdAndUp ? 'testimonial-border' : 'testimonial-mobile-border'
@@ -253,7 +265,7 @@ const testimonialsContent = ref([
                 ></TestimonialCard>
               </div>
             </v-col>
-            <v-col cols="12" md="2">
+            <v-col cols="7" md="3">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[2]"
               ></TestimonialCard>
@@ -267,8 +279,8 @@ const testimonialsContent = ref([
 
 <style>
 .home {
-  background: url("../assets/bg.png") center;
-  background-size: cover !important;
+  background: url("../assets/bg.png") no-repeat;
+  /* background-size: cover !important; */
   width: 100%;
   height: 100%;
 }
@@ -295,7 +307,7 @@ const testimonialsContent = ref([
   height: 95%;
 }
 .welcome-container {
-  height: 150px;
+  height: 200px;
   border: solid 2px #474543;
   border-radius: 0px;
   z-index: 0;
@@ -352,8 +364,9 @@ const testimonialsContent = ref([
 }
 .intro-about-container-desktop {
   margin-top: 10rem;
-  background: url("../assets/experience_bg.png");
-  height: 470px;
+  background: url("../assets/experience_bg.png") center;
+  background-size: auto;
+  height: 460px;
 }
 .intro-about-container-mobile {
   padding-top: 3px;
@@ -375,7 +388,7 @@ const testimonialsContent = ref([
   background-color: #121212;
 }
 .testimonials-mobile-height {
-  height: 580px;
+  height: 680px;
 }
 .testimonials-desktop-height {
   height: 470px;
@@ -383,9 +396,12 @@ const testimonialsContent = ref([
 .testimonials-card-container {
   margin-top: 1rem;
 }
-.testimonial-margin {
+.testimonial-margin-desktop {
   margin-top: 7rem;
   margin-bottom: 2.5rem;
+}
+.testimonial-margin-mobile {
+  margin-top: 3.5rem;
 }
 .about-button {
   max-width: 6.25rem;

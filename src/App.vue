@@ -74,8 +74,8 @@ const onLogoClick = function () {
     <v-main>
       <router-view />
     </v-main>
-    <v-footer app padless class="footer" absolute>
-      <v-row no-gutters justify="center">
+    <v-footer app class="footer" absolute>
+      <v-row justify="center">
         <v-btn class="pa-0">
           <div class="linkedin"></div>
         </v-btn>
@@ -91,10 +91,19 @@ const onLogoClick = function () {
         <v-btn class="pa-0">
           <div class="dot"></div>
         </v-btn>
-        <v-divider color="#000000" class="my-5" />
-        <v-row no-gutters justify="center">
-          <p class="email-text">felipearaujodemirandagomes@gmail.com</p>
-        </v-row>
+        <v-col cols="11">
+          <p class="email-text text-center mt-4">
+            felipearaujodemirandagomes@gmail.com
+          </p>
+        </v-col>
+        <v-col cols="11">
+          <v-row justify="center" no-gutters dense>
+            <div class="footer-line"></div>
+          </v-row>
+        </v-col>
+        <v-col cols="11">
+          <p class="email-text text-center">web development by Antonio Gomes</p>
+        </v-col>
       </v-row>
     </v-footer>
   </v-app>
@@ -110,6 +119,12 @@ const onLogoClick = function () {
   line-height: 1.44rem;
   letter-spacing: 0.13rem;
   color: #cdcdcd;
+}
+.testimonial-title-mobile {
+  font-size: 0.875rem;
+  letter-spacing: 0.5rem;
+  line-height: 1.2rem;
+  color: #c8c8c8;
 }
 .smaller-welcome-text {
   font-size: 0.625rem;
@@ -164,6 +179,26 @@ const onLogoClick = function () {
   font-size: 0.75rem;
   font-weight: 400;
   font-style: italic;
+  line-height: 1.625rem;
+  letter-spacing: 0.125rem;
+  color: #858585;
+}
+.smaller-citation-text {
+  font-size: 0.57rem;
+  font-style: italic;
+  line-height: 1.03rem;
+  letter-spacing: 0.125rem;
+  color: #858585;
+}
+.smaller-testimonial-text {
+  font-size: 0.57rem;
+  line-height: 1.03rem;
+  letter-spacing: 0.125rem;
+  color: #858585;
+}
+.testimonial-text {
+  font-size: 0.75rem;
+  font-weight: 400;
   line-height: 1.625rem;
   letter-spacing: 0.125rem;
   color: #858585;
@@ -229,5 +264,10 @@ const onLogoClick = function () {
   font-size: 0.75rem;
   letter-spacing: 0.09rem;
   color: #858585;
+}
+.footer-line {
+  height: 1px;
+  width: 50px;
+  border-top: 1px solid #858585;
 }
 </style>

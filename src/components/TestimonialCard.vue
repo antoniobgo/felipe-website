@@ -1,33 +1,49 @@
 <script setup>
 import { ref, defineProps } from "vue";
+import { useDisplay } from "vuetify";
+
+const { mdAndUp } = useDisplay();
 
 const props = defineProps(["testimonialContent"]);
 const testimonialContent = ref(props.testimonialContent);
 </script>
 
 <template>
-  <v-card variant="outlined" class="testimonial-card">
-    <v-card-text>
-      <p class="citation-text text-center">
-        {{ testimonialContent.content }}
-      </p>
-    </v-card-text>
-    <div class="grey-color">
-      <v-row justify="center">
-        <p class="citation-text">{{ testimonialContent.name }}</p>
-      </v-row>
-      <v-row justify="center">
-        <p class="citation-text">{{ testimonialContent.jobTitle }}</p>
-      </v-row>
-    </div>
-  </v-card>
+  <v-row justify="center" class="testimonial-card" no-gutters dense>
+    <v-col :cols="mdAndUp ? 7 : 12" align-self="center">
+      <v-container>
+        <p
+          class="text-center"
+          :class="mdAndUp ? 'citation-text' : 'smaller-citation-text'"
+        >
+          {{ testimonialContent.content }}
+        </p>
+        <div class="grey-color">
+          <v-row justify="center">
+            <p
+              class="mt-10"
+              :class="mdAndUp ? 'testimonial-text' : 'smaller-testimonial-text'"
+            >
+              {{ testimonialContent.name }}
+            </p>
+          </v-row>
+          <v-row justify="center">
+            <p
+              class="mt-2"
+              :class="mdAndUp ? 'testimonial-text' : 'smaller-testimonial-text'"
+            >
+              {{ testimonialContent.jobTitle }}
+            </p>
+          </v-row>
+        </div>
+      </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <style>
 .testimonial-card {
-  /* width: 250px; */
   height: 200px;
-  border-width: 0;
 }
 .grey-color {
   color: #858585;
