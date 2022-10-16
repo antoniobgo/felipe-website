@@ -427,6 +427,9 @@ const testimonialsContent = ref([
   max-width: 6.25rem;
   max-height: 1.5rem;
 }
+.about-button:hover {
+  cursor: pointer;
+}
 .testimonial-border {
   border-left: solid 1px #747474;
   border-right: solid 1px #747474;
