@@ -28,13 +28,13 @@ const testimonialsContent = ref([
 </script>
 
 <template>
-  <div class="home">
+  <div class="home" :class="mdAndUp ? 'home-bg-desktop' : 'home-bg-mobile'">
     <div>
       <v-row no-gutters dense justify="center">
         <v-col cols="11" md="6" class="title-margin">
           <div
             class="video-container"
-            :class="mdAndUp ? 'desktop-height' : 'mobile-height'"
+            :class="mdAndUp ? 'desktop-height' : 'reel-mobile-height'"
           >
             <div class="video-internal-container">
               <iframe
@@ -50,7 +50,14 @@ const testimonialsContent = ref([
       </v-row>
       <v-row no-gutters dense justify="center">
         <v-col cols="11" md="6" :class="mdAndUp ? 'mt-15' : 'mt-5'">
-          <v-card class="welcome-container">
+          <v-card
+            class="welcome-container"
+            :class="
+              mdAndUp
+                ? 'welcome-container-desktop-height'
+                : 'welcome-container-mobile-height'
+            "
+          >
             <v-row justify="center" class="h-100" align="center">
               <v-col cols="12" align-self="center">
                 <div class="pt-3">
@@ -279,10 +286,15 @@ const testimonialsContent = ref([
 
 <style>
 .home {
-  background: url("../assets/bg.png") no-repeat;
-  /* background-size: cover !important; */
   width: 100%;
   height: 100%;
+}
+.home-bg-mobile {
+  background: url("../assets/bg_mobile.png") center;
+  background-size: cover;
+}
+.home-bg-desktop {
+  background: url("../assets/bg.png") no-repeat;
 }
 .video-container {
   position: relative;
@@ -294,6 +306,9 @@ const testimonialsContent = ref([
 }
 .mobile-height {
   height: 176px;
+}
+.reel-mobile-height {
+  height: 230px;
 }
 .video-internal-container {
   width: 100%;
@@ -307,13 +322,18 @@ const testimonialsContent = ref([
   height: 95%;
 }
 .welcome-container {
-  height: 200px;
   border: solid 2px #474543;
   border-radius: 0px;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, #15150e 0%, #0b0a03 100%);
   padding: 8px;
   background-clip: content-box;
+}
+.welcome-container-mobile-height {
+  height: 150px;
+}
+.welcome-container-desktop-height {
+  height: 200px;
 }
 .video-container {
   border-radius: 0px;
