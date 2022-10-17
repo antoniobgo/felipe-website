@@ -12,7 +12,7 @@ const onHoverStyleObject = ref({
 </script>
 
 <template>
-  <v-row class="pl-7 pr-15" no-gutters align="center">
+  <v-row class="pl-2" no-gutters align="center">
     <div class="software-icon-size" :style="onHoverStyleObject"></div>
     <p class="text-start description-text ml-10">{{ title }}</p>
   </v-row>

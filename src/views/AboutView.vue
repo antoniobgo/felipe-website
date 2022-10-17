@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { useDisplay } from "vuetify";
 import SkillLine from "@/components/SkillLine.vue";
 import SoftwareLine from "@/components/SoftwareLine.vue";
 import PretensionItem from "@/components/PretensionItem.vue";
@@ -7,6 +8,8 @@ import PretensionItem from "@/components/PretensionItem.vue";
 const portugueseValue = ref(95);
 const englishValue = ref(70);
 const spanishValue = ref(45);
+
+const { mdAndUp } = useDisplay();
 
 const skills = ref([
   {
@@ -96,18 +99,28 @@ const pretensions = ref([
 <template>
   <div class="about">
     <v-row justify="center" class="about-container" no-gutters>
-      <v-col cols="6">
+      <v-col cols="11" md="6">
         <v-row no-gutters>
-          <p class="title-text mb-15">ABOUT</p>
+          <p class="title-text" :class="mdAndUp ? 'mb-15' : 'mb-6'">ABOUT</p>
         </v-row>
-        <v-row no-gutters justify="" class="description-container">
-          <v-col cols="4" align-self="center">
+        <v-row
+          no-gutters
+          justify=""
+          :class="
+            mdAndUp ? 'description-container' : 'description-container-mobile'
+          "
+        >
+          <v-col v-if="mdAndUp" cols="4" align-self="center">
             <v-row no-gutters justify="center">
               <div class="about-picture-container"></div>
             </v-row>
           </v-col>
-          <v-col cols="8" align-self="center">
-            <p class="description-text">
+          <v-col cols="12" md="8" align-self="center">
+            <p
+              :class="
+                mdAndUp ? 'description-text' : 'text-center description-text'
+              "
+            >
               Currently motion designer senior and 3d student, living in
               Florianópolis, Brazil. Dedicated, responsive, experienced, loves
               nature, electronics, skateboarding, studying, creating things and
@@ -115,99 +128,102 @@ const pretensions = ref([
             </p>
           </v-col>
         </v-row>
-        <v-row no-gutters class="mt-15">
+        <v-row no-gutters class="mt-15 pb-15">
           <v-col
-            cols="4"
-            style="border-right: solid 2px #474543; margin-bottom: 3rem"
+            cols="11"
+            md="4"
+            :class="mdAndUp ? 'general-container' : 'general-container-mobile'"
           >
-            <div class="text-white w-75">
-              <p class="about-title-text">Graduate</p>
-              <ul class="pl-5 mt-5">
-                <li class="description-text">
-                  <p>Bachelor Degree in Design - UNISUL</p>
-                </li>
-                <li class="description-text">
-                  <p>Degree in Technological Education - IFSC</p>
-                </li>
-              </ul>
-              <p class="about-title-text mt-5">Languages</p>
-              <v-row no-gutters dense justify="space-between" align="center">
-                <v-col cols="9" class="mt-5">
-                  <v-row
-                    no-gutters
-                    dense
-                    justify="space-between"
-                    align="center"
-                  >
-                    <p class="description-text">Portuguese</p>
-                    <v-progress-linear
-                      height="12"
-                      v-model="portugueseValue"
-                      :buffer-value="bufferValue"
-                      class="testizin mt-1"
-                    ></v-progress-linear>
-                  </v-row>
-                </v-col>
-              </v-row>
-              <v-row no-gutters dense>
-                <v-col cols="9">
-                  <v-row
-                    no-gutters
-                    dense
-                    justify="space-between"
-                    align="center"
-                  >
-                    <p class="description-text">English</p>
-                    <v-progress-linear
-                      height="12"
-                      v-model="englishValue"
-                      :buffer-value="bufferValue"
-                      class="testizin mt-1"
-                    ></v-progress-linear>
-                  </v-row> </v-col
-              ></v-row>
-              <v-row no-gutters dense>
-                <v-col cols="9">
-                  <v-row
-                    no-gutters
-                    dense
-                    justify="space-between"
-                    align="center"
-                  >
-                    <p class="description-text">Spanish</p>
-                    <v-progress-linear
-                      height="12"
-                      v-model="spanishValue"
-                      :buffer-value="bufferValue"
-                      class="testizin mt-1"
-                    ></v-progress-linear>
-                  </v-row>
-                </v-col>
-              </v-row>
-            </div>
+            <v-row no-gutters dense justify="center">
+              <div class="text-white w-75">
+                <p class="about-title-text">Graduate</p>
+                <ul class="pl-5 mt-5">
+                  <li class="description-text">
+                    <p>Bachelor Degree in Design - UNISUL</p>
+                  </li>
+                  <li class="description-text">
+                    <p>Degree in Technological Education - IFSC</p>
+                  </li>
+                </ul>
+                <p class="about-title-text mt-5">Languages</p>
+                <v-row no-gutters dense justify="space-between" align="center">
+                  <v-col cols="9" class="mt-5">
+                    <v-row
+                      no-gutters
+                      dense
+                      justify="space-between"
+                      align="center"
+                    >
+                      <p class="description-text">Portuguese</p>
+                      <v-progress-linear
+                        height="12"
+                        v-model="portugueseValue"
+                        :buffer-value="bufferValue"
+                        class="testizin mt-1"
+                      ></v-progress-linear>
+                    </v-row>
+                  </v-col>
+                </v-row>
+                <v-row no-gutters dense>
+                  <v-col cols="9">
+                    <v-row
+                      no-gutters
+                      dense
+                      justify="space-between"
+                      align="center"
+                    >
+                      <p class="description-text">English</p>
+                      <v-progress-linear
+                        height="12"
+                        v-model="englishValue"
+                        :buffer-value="bufferValue"
+                        class="testizin mt-1"
+                      ></v-progress-linear>
+                    </v-row> </v-col
+                ></v-row>
+                <v-row no-gutters dense>
+                  <v-col cols="9">
+                    <v-row
+                      no-gutters
+                      dense
+                      justify="space-between"
+                      align="center"
+                    >
+                      <p class="description-text">Spanish</p>
+                      <v-progress-linear
+                        height="12"
+                        v-model="spanishValue"
+                        :buffer-value="bufferValue"
+                        class="testizin mt-1"
+                      ></v-progress-linear>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-row>
           </v-col>
           <v-col
-            cols="4"
-            style="border-right: solid 2px #474543; margin-bottom: 3rem"
-            ><div>
-              <p class="about-title-text ml-7">Skills</p>
+            cols="11"
+            md="4"
+            :class="mdAndUp ? 'general-container' : 'general-container-mobile'"
+          >
+            <div>
+              <p class="about-title-text pl-7">Skills</p>
               <v-row no-gutters dense justify="center" align="center">
                 <v-col cols="12" class="mt-5">
-                  <div class="">
-                    <SkillLine
-                      v-for="item in skills"
-                      :key="item.title"
-                      :title="item.title"
-                      :rating="item.rating"
-                    />
-                  </div>
+                  <SkillLine
+                    v-for="item in skills"
+                    :key="item.title"
+                    :title="item.title"
+                    :rating="item.rating"
+                  />
                 </v-col>
               </v-row>
             </div>
           </v-col>
-          <v-col cols="4">
-            <div>
-              <p class="about-title-text ml-7">Softwares</p>
+          <v-col cols="11" md="4">
+            <div :class="mdAndUp ? 'pl-10' : 'pl-5'">
+              <p class="about-title-text pl-3">Softwares</p>
               <v-row no-gutters dense justify="center" align="center">
                 <v-col cols="12" class="mt-5">
                   <div class="">
@@ -225,15 +241,10 @@ const pretensions = ref([
         </v-row>
       </v-col>
       <v-col cols="12">
-        <v-row
-          no-gutters
-          justify="center"
-          dense
-          class="pretensions-performance-container"
-        >
-          <v-col cols="6">
+        <v-row justify="center" dense class="pretensions-performance-container">
+          <v-col cols="11" md="6">
             <v-row no-gutters dense class="mt-15">
-              <v-col cols="6">
+              <v-col cols="6" :class="mdAndUp ? 'pl-15' : 'pl-5'">
                 <p class="about-title-text">Pretencions</p>
                 <div class="pretensions-list-container">
                   <PretensionItem
@@ -244,7 +255,7 @@ const pretensions = ref([
                   ></PretensionItem>
                 </div>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="11" md="6" :class="mdAndUp ? '' : 'pl-6 mt-7'">
                 <p class="about-title-text">Current performance</p>
                 <ul class="pl-5 mt-8">
                   <li class="description-text">
@@ -307,6 +318,12 @@ const pretensions = ref([
   color: #858585;
   letter-spacing: 0.031rem;
 }
+.smaller-description-text {
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+  color: #858585;
+  letter-spacing: 0.02rem;
+}
 .about-title-text {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -318,14 +335,26 @@ const pretensions = ref([
   height: 270px;
   border: solid 2px #474543;
 }
+.description-container-mobile {
+  margin-top: 4rem;
+  height: 350px;
+  border: solid 2px #474543;
+}
 .about-picture-container {
   min-width: 173px;
   min-height: 156px;
   background-image: url("../assets/about_pic.png");
 }
+.general-container {
+  border-right: solid 2px #474543;
+  margin-bottom: 3rem;
+}
+.general-container-mobile {
+  margin-bottom: 3rem;
+}
 .pretensions-performance-container {
-  height: 540px;
   background: #0b0b0b;
+  padding-bottom: 5rem;
 }
 .pretensions-list-container {
   margin-top: 30px;

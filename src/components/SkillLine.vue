@@ -10,7 +10,7 @@ console.log(info.value);
 </script>
 
 <template>
-  <v-row class="pl-7 pr-15" no-gutters justify="space-between" align="center">
+  <v-row class="pl-7 pr-7" no-gutters justify="space-between" align="center">
     <p class="text-start description-text">{{ info }}</p>
     <div>
       <v-row no-gutters dense>
