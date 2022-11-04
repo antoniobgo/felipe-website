@@ -296,11 +296,7 @@ const testimonialsContent = ref([
 .home-bg-desktop {
   background: url("../assets/bg.png") no-repeat;
 }
-.video-container {
-  position: relative;
-  border: solid 2px #474543;
-  border-radius: 0px;
-}
+
 .desktop-height {
   height: 550px;
 }
@@ -314,8 +310,6 @@ const testimonialsContent = ref([
   width: 100%;
   height: 100%;
   background-clip: content-box; /* support: IE9+ */
-  /* background-color: #ccc; */
-  padding: 8px;
 }
 .videoreel-row {
   width: 95%;
