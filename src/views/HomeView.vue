@@ -31,7 +31,11 @@ const testimonialsContent = ref([
   <div class="home" :class="mdAndUp ? 'home-bg-desktop' : 'home-bg-mobile'">
     <div>
       <v-row no-gutters dense justify="center">
-        <v-col cols="11" md="6" class="reel-margin">
+        <v-col
+          cols="11"
+          md="6"
+          :class="mdAndUp ? 'reel-margin' : 'mobile-margin-1'"
+        >
           <div
             class="video-container"
             :class="mdAndUp ? 'desktop-height' : 'reel-mobile-height'"
@@ -49,7 +53,7 @@ const testimonialsContent = ref([
         </v-col>
       </v-row>
       <v-row no-gutters dense justify="center">
-        <v-col cols="11" md="6" :class="mdAndUp ? 'mt-15' : 'mt-5'">
+        <v-col cols="11" md="6" :class="mdAndUp ? 'mt-15' : 'mobile-margin-2'">
           <v-card
             class="welcome-container"
             :class="
@@ -89,12 +93,7 @@ const testimonialsContent = ref([
           </v-card>
         </v-col>
       </v-row>
-      <v-row
-        no-gutters
-        dense
-        justify="center"
-        :class="mdAndUp ? 'mt-15' : 'mt-5'"
-      >
+      <v-row no-gutters dense justify="center">
         <v-col cols="11" md="3">
           <div :class="mdAndUp ? 'mr-3' : ''">
             <v-hover v-slot="{ isHovering, props }">
@@ -105,11 +104,11 @@ const testimonialsContent = ref([
                 :class="
                   isHovering
                     ? mdAndUp
-                      ? 'motion-video-container-onhover'
-                      : 'motion-video-container-onhover-mobile'
+                      ? 'motion-video-container-onhover mt-15'
+                      : 'motion-video-container-onhover-mobile mobile-margin-2'
                     : mdAndUp
-                    ? 'motion-video-container'
-                    : 'motion-video-container-mobile'
+                    ? 'motion-video-container mt-15'
+                    : 'motion-video-container-mobile mobile-margin-2'
                 "
                 v-bind="props"
               >
@@ -144,11 +143,11 @@ const testimonialsContent = ref([
                 :class="
                   isHovering
                     ? mdAndUp
-                      ? 'threed-video-container-onhover'
-                      : 'threed-video-container-onhover-mobile'
+                      ? 'threed-video-container-onhover mt-15'
+                      : 'threed-video-container-onhover-mobile mobile-margin-2'
                     : mdAndUp
-                    ? 'threed-video-container'
-                    : 'threed-video-container-mobile'
+                    ? 'threed-video-container mt-15'
+                    : 'threed-video-container-mobile mobile-margin-2'
                 "
                 v-bind="props"
               >
@@ -179,7 +178,7 @@ const testimonialsContent = ref([
           :class="
             mdAndUp
               ? 'intro-about-container-desktop'
-              : 'intro-about-container-mobile'
+              : 'intro-about-container-mobile mobile-margin-3'
           "
         >
           <v-row no-gutters class="h-100" justify="center">
@@ -192,14 +191,16 @@ const testimonialsContent = ref([
                   :class="
                     mdAndUp
                       ? 'ml-10 mb-10 second-title-text'
-                      : 'mb-3 smaller-second-title-text'
+                      : 'smaller-second-title-text'
                   "
                 >
                   EXPERIENCE
                 </p>
                 <p
                   :class="
-                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                    mdAndUp
+                      ? 'ml-10 default-text'
+                      : 'smaller-default-text mobile-margin-2'
                   "
                 >
                   Visual Designer since 2006
@@ -229,7 +230,7 @@ const testimonialsContent = ref([
                   @click="router.push({ name: 'about' })"
                   flat
                   class="font-menu about-button text-black"
-                  :class="mdAndUp ? 'ml-10 mt-10' : 'mt-3'"
+                  :class="mdAndUp ? 'ml-10 mt-10' : 'mobile-margin-2'"
                   color="#D2B100"
                   >ABOUT</v-btn
                 >
@@ -250,7 +251,7 @@ const testimonialsContent = ref([
               :class="
                 mdAndUp
                   ? 'second-title-text testimonial-margin-desktop'
-                  : 'testimonial-title-mobile testimonial-margin-mobile'
+                  : 'testimonial-title-mobile mobile-margin-4'
               "
             >
               TESTIMONIALS
@@ -261,12 +262,12 @@ const testimonialsContent = ref([
             justify="center"
             class="testimonials-card-container"
           >
-            <v-col cols="7" md="3">
+            <v-col cols="11" md="3">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[0]"
               ></TestimonialCard>
             </v-col>
-            <v-col cols="7" md="3">
+            <v-col cols="11" md="3">
               <div
                 :class="
                   mdAndUp ? 'testimonial-border' : 'testimonial-mobile-border'
@@ -278,7 +279,7 @@ const testimonialsContent = ref([
                 ></TestimonialCard>
               </div>
             </v-col>
-            <v-col cols="7" md="3">
+            <v-col cols="11" md="3">
               <TestimonialCard
                 :testimonialContent="testimonialsContent[2]"
               ></TestimonialCard>
@@ -388,8 +389,6 @@ const testimonialsContent = ref([
   height: 460px;
 }
 .intro-about-container-mobile {
-  padding-top: 3px;
-  margin-top: 10px;
   background: black;
   height: 230px;
 }
@@ -418,9 +417,6 @@ const testimonialsContent = ref([
 .testimonial-margin-desktop {
   margin-top: 7rem;
   margin-bottom: 2.5rem;
-}
-.testimonial-margin-mobile {
-  margin-top: 3.5rem;
 }
 .about-button {
   max-width: 6.25rem;

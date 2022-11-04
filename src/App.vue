@@ -181,27 +181,27 @@ const onLogoClick = function () {
   font-style: italic;
   line-height: 1.625rem;
   letter-spacing: 0.125rem;
-  color: #858585;
+  color: #c8c8c8;
 }
 .smaller-citation-text {
-  font-size: 0.57rem;
+  font-size: 0.65rem;
   font-style: italic;
-  line-height: 1.03rem;
+  line-height: 1.125rem;
   letter-spacing: 0.125rem;
-  color: #858585;
+  color: #c8c8c8;
 }
 .smaller-testimonial-text {
   font-size: 0.57rem;
   line-height: 1.03rem;
   letter-spacing: 0.125rem;
-  color: #858585;
+  color: #c8c8c8;
 }
 .testimonial-text {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.625rem;
   letter-spacing: 0.125rem;
-  color: #858585;
+  color: #c8c8c8;
 }
 .default-text {
   font-size: 1rem;
@@ -222,6 +222,18 @@ const onLogoClick = function () {
   text-transform: uppercase;
   line-height: normal;
   font-weight: 500;
+}
+.mobile-margin-1 {
+  margin-top: 30px;
+}
+.mobile-margin-2 {
+  margin-top: 15px;
+}
+.mobile-margin-3 {
+  margin-top: 40px;
+}
+.mobile-margin-4 {
+  margin-top: 60px;
 }
 .logo {
   background: url("./assets/logo.svg") no-repeat center fixed;

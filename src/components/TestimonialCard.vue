@@ -10,8 +10,8 @@ const testimonialContent = ref(props.testimonialContent);
 
 <template>
   <v-row justify="center" class="testimonial-card" no-gutters dense>
-    <v-col :cols="mdAndUp ? 7 : 12" align-self="center">
-      <v-container>
+    <v-col :cols="mdAndUp ? 7 : 12" :align-self="mdAndUp ? 'center' : ''">
+      <v-container class="pa-0" :class="mdAndUp ? '' : 'mobile-margin-3'">
         <p
           class="text-center"
           :class="mdAndUp ? 'citation-text' : 'smaller-citation-text'"
