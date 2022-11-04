@@ -31,7 +31,7 @@ const testimonialsContent = ref([
   <div class="home" :class="mdAndUp ? 'home-bg-desktop' : 'home-bg-mobile'">
     <div>
       <v-row no-gutters dense justify="center">
-        <v-col cols="11" md="6" class="title-margin">
+        <v-col cols="11" md="6" class="reel-margin">
           <div
             class="video-container"
             :class="mdAndUp ? 'desktop-height' : 'reel-mobile-height'"
@@ -58,7 +58,13 @@ const testimonialsContent = ref([
                 : 'welcome-container-mobile-height'
             "
           >
-            <v-row justify="center" class="h-100" align="center">
+            <v-row
+              no-gutters
+              dense
+              justify="center"
+              class="h-100"
+              align="center"
+            >
               <v-col cols="12" align-self="center">
                 <div class="pt-3">
                   <p class="pb-3 text-center welcome-text">
@@ -331,7 +337,6 @@ const testimonialsContent = ref([
 }
 .video-container {
   border-radius: 0px;
-  margin-top: 10px;
   padding: 8px;
   border: solid 2px #474543;
   background-clip: content-box;
@@ -373,7 +378,7 @@ const testimonialsContent = ref([
   position: relative;
   top: 20vh;
 }
-.title-margin {
+.reel-margin {
   margin-top: 5rem;
 }
 .intro-about-container-desktop {
