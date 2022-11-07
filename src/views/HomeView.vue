@@ -69,7 +69,7 @@ const testimonialsContent = ref([
               class="h-100"
               align="center"
             >
-              <v-col cols="12" align-self="center">
+              <v-col cols="11" align-self="center">
                 <div class="pt-3">
                   <p class="pb-3 text-center welcome-text">
                     WELCOME TO MY PORTFOLIO!

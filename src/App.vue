@@ -135,7 +135,7 @@ const onLogoClick = function () {
 .smaller-welcome-text {
   font-size: 0.625rem;
   line-height: 1.03rem;
-  letter-spacing: 0.13rem;
+  letter-spacing: 0.09rem;
   color: #cdcdcd;
 }
 .video-text {
