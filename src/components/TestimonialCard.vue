@@ -10,8 +10,8 @@ const testimonialContent = ref(props.testimonialContent);
 
 <template>
   <v-row justify="center" class="testimonial-card" no-gutters dense>
-    <v-col :cols="mdAndUp ? 7 : 12" :align-self="mdAndUp ? 'center' : ''">
-      <v-container class="pa-0" :class="mdAndUp ? '' : 'mobile-margin-3'">
+    <v-col :cols="mdAndUp ? 7 : 12" align-self="center">
+      <v-container class="pa-0">
         <p
           class="text-center"
           :class="mdAndUp ? 'citation-text' : 'smaller-citation-text'"
@@ -19,7 +19,7 @@ const testimonialContent = ref(props.testimonialContent);
           {{ testimonialContent.content }}
         </p>
         <div class="grey-color">
-          <v-row justify="center">
+          <v-row no-gutters dense justify="center">
             <p
               class="mt-10"
               :class="mdAndUp ? 'testimonial-text' : 'smaller-testimonial-text'"
@@ -27,9 +27,8 @@ const testimonialContent = ref(props.testimonialContent);
               {{ testimonialContent.name }}
             </p>
           </v-row>
-          <v-row justify="center">
+          <v-row no-gutters dense justify="center">
             <p
-              class="mt-2"
               :class="mdAndUp ? 'testimonial-text' : 'smaller-testimonial-text'"
             >
               {{ testimonialContent.jobTitle }}

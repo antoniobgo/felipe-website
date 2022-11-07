@@ -190,14 +190,14 @@ const onLogoClick = function () {
   color: #c8c8c8;
 }
 .smaller-citation-text {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-style: italic;
   line-height: 1.125rem;
   letter-spacing: 0.125rem;
   color: #c8c8c8;
 }
 .smaller-testimonial-text {
-  font-size: 0.57rem;
+  font-size: 0.68rem;
   line-height: 1.03rem;
   letter-spacing: 0.125rem;
   color: #c8c8c8;

@@ -277,17 +277,18 @@ const testimonialsContent = ref([
                 :testimonialContent="testimonialsContent[0]"
               ></TestimonialCard>
             </v-col>
-            <v-col cols="11" md="3">
-              <div
-                :class="
-                  mdAndUp ? 'testimonial-border' : 'testimonial-mobile-border'
-                "
-                class="pl-3 pr-3"
-              >
-                <TestimonialCard
-                  :testimonialContent="testimonialsContent[1]"
-                ></TestimonialCard>
-              </div>
+            <v-col v-if="!mdAndUp" class="horizontal-line-divider" cols="3">
+            </v-col>
+            <v-col
+              cols="11"
+              md="3"
+              :class="mdAndUp ? 'testimonial-border' : ''"
+            >
+              <TestimonialCard
+                :testimonialContent="testimonialsContent[1]"
+              ></TestimonialCard>
+            </v-col>
+            <v-col v-if="!mdAndUp" class="horizontal-line-divider" cols="3">
             </v-col>
             <v-col cols="11" md="3">
               <TestimonialCard
@@ -449,6 +450,16 @@ const testimonialsContent = ref([
   line-height: 0.7rem;
   letter-spacing: 0.18rem;
 }
+.horizontal-line-divider {
+  width: 100%;
+  border-top: solid 1px #747474;
+}
+.vertical-line-divider {
+  height: 100%;
+  width: 0%;
+  border-right: solid 1px #747474;
+}
+
 .testimonial-border {
   border-left: solid 1px #747474;
   border-right: solid 1px #747474;
