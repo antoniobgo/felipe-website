@@ -182,11 +182,11 @@ const testimonialsContent = ref([
           "
         >
           <v-row no-gutters class="h-100" justify="center">
-            <v-col cols="7" md="3">
+            <v-col cols="8" md="3">
               <div class="profile-pic-container"></div>
             </v-col>
-            <v-col cols="5" md="4" align-self="center">
-              <div :class="mdAndUp ? '' : 'pt-3 pr-3'">
+            <v-col cols="4" md="4" align-self="center">
+              <div :class="mdAndUp ? '' : 'experience-container-position'">
                 <p
                   :class="
                     mdAndUp
@@ -199,29 +199,35 @@ const testimonialsContent = ref([
                 <p
                   :class="
                     mdAndUp
-                      ? 'ml-10 default-text'
-                      : 'smaller-default-text mobile-margin-2'
+                      ? 'ml-10 experience-default-text'
+                      : 'experience-smaller-default-text mobile-margin-2'
                   "
                 >
                   Visual Designer since 2006
                 </p>
                 <p
                   :class="
-                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                    mdAndUp
+                      ? 'ml-10 experience-default-text'
+                      : 'experience-smaller-default-text'
                   "
                 >
                   Motion designer since 2015
                 </p>
                 <p
                   :class="
-                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                    mdAndUp
+                      ? 'ml-10 experience-default-text'
+                      : 'experience-smaller-default-text'
                   "
                 >
                   3d artist in his spare time since 2017
                 </p>
                 <p
                   :class="
-                    mdAndUp ? 'ml-10 default-text' : 'smaller-default-text'
+                    mdAndUp
+                      ? 'ml-10 experience-default-text'
+                      : 'experience-smaller-default-text'
                   "
                 >
                   UX designer since 2021
@@ -229,8 +235,12 @@ const testimonialsContent = ref([
                 <v-btn
                   @click="router.push({ name: 'about' })"
                   flat
-                  class="font-menu about-button text-black"
-                  :class="mdAndUp ? 'ml-10 mt-10' : 'mobile-margin-2'"
+                  class="text-black rounded-0"
+                  :class="
+                    mdAndUp
+                      ? 'about-button ml-10 mt-10'
+                      : 'mobile-about-button mobile-margin-2'
+                  "
                   color="#D2B100"
                   >ABOUT</v-btn
                 >
@@ -395,8 +405,12 @@ const testimonialsContent = ref([
 .profile-pic-container {
   width: 100%;
   height: 100%;
-  background: url("../assets/experience_profile.png");
+  background: url("../assets/experience_profile.png") center;
   background-size: cover;
+}
+.experience-container-position {
+  position: relative;
+  right: 40px;
 }
 .onhover-area {
   height: 108px;
@@ -419,11 +433,21 @@ const testimonialsContent = ref([
   margin-bottom: 2.5rem;
 }
 .about-button {
-  max-width: 6.25rem;
-  max-height: 1.5rem;
+  width: 100px;
+  max-height: 25px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.28rem;
 }
 .about-button:hover {
   cursor: pointer;
+}
+.mobile-about-button {
+  width: 70px;
+  max-height: 17px;
+  font-size: 0.5rem;
+  line-height: 0.7rem;
+  letter-spacing: 0.18rem;
 }
 .testimonial-border {
   border-left: solid 1px #747474;

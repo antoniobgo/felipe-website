@@ -220,6 +220,17 @@ const onLogoClick = function () {
   line-height: 1.125rem;
   color: #858585;
 }
+.experience-default-text {
+  font-size: 1rem;
+  letter-spacing: 0.156rem;
+  line-height: 2rem;
+  color: #c8c8c8;
+}
+.experience-smaller-default-text {
+  font-size: 0.6rem;
+  line-height: 1.125rem;
+  color: #c8c8c8;
+}
 .app-bar-text {
   font-family: Bakbak One, sans-serif;
   font-weight: 500;
