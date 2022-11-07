@@ -74,31 +74,37 @@ const onLogoClick = function () {
     <v-main>
       <router-view />
     </v-main>
-    <v-footer app class="footer" absolute>
-      <v-row justify="center">
-        <v-btn class="pa-0">
-          <div class="linkedin"></div>
-        </v-btn>
-        <v-btn class="pa-0">
-          <div class="ig"></div>
-        </v-btn>
-        <v-btn class="pa-0">
-          <div class="vimeo"></div>
-        </v-btn>
-        <v-btn class="pa-0">
-          <div class="youtube"></div>
-        </v-btn>
-        <v-btn class="pa-0">
-          <div class="dot"></div>
-        </v-btn>
+    <v-footer app :class="mdAndUp ? 'footer' : 'mobile-footer'" absolute>
+      <v-row dense no-gutters justify="center">
+        <v-col align="start" cols="12" md="7">
+          <v-row dense no-gutters justify="center" class="pb-5">
+            <form action="https://www.linkedin.com/in/felipe-miranda-gomes/">
+              <button class="footer-button linkedin" type="submit" />
+            </form>
+            <form action="https://www.instagram.com/_felipemirandagomes/">
+              <button class="footer-button ig" type="submit" />
+            </form>
+            <form action="https://vimeo.com/felipegomesmotiondesign">
+              <button class="footer-button vimeo" type="submit" />
+            </form>
+            <form
+              action="https://www.youtube.com/channel/UC4fvA-TpNIE3GUwiPWUvbnQ"
+            >
+              <button class="footer-button youtube" type="submit" />
+            </form>
+            <form action="https://www.flickr.com/photos/felipemirando/">
+              <button class="footer-button dot" type="submit" />
+            </form>
+          </v-row>
+        </v-col>
         <v-col cols="11">
-          <p class="email-text text-center mt-4">
+          <p class="email-text text-center my-4">
             felipearaujodemirandagomes@gmail.com
           </p>
         </v-col>
         <v-col cols="11">
           <v-row justify="center" no-gutters dense>
-            <div class="footer-line"></div>
+            <div class="mb-4 footer-line"></div>
           </v-row>
         </v-col>
         <v-col cols="11">
@@ -247,30 +253,32 @@ const onLogoClick = function () {
   height: 345px;
   background-color: #070707;
 }
+.mobile-footer {
+  height: 230px;
+  background-color: #070707;
+}
 .linkedin {
   background: url("./assets/linkedin.png") no-repeat center fixed;
-  height: 3rem;
-  width: 4rem;
 }
 .youtube {
   background: url("./assets/youtube.png") no-repeat center fixed;
-  height: 3rem;
-  width: 4rem;
 }
 .vimeo {
   background: url("./assets/vimeo.png") no-repeat center fixed;
-  height: 3rem;
-  width: 4rem;
+}
+.footer-button {
+  height: 40px;
+  width: 60px;
+  margin: 0 4px 0 4px;
+}
+.footer-button:hover {
+  cursor: pointer;
 }
 .dot {
-  background: url("./assets/dot.png") no-repeat center fixed;
-  height: 3rem;
-  width: 4rem;
+  background: url("./assets/dot.png") center;
 }
 .ig {
   background: url("./assets/ig.png") no-repeat center fixed;
-  height: 3rem;
-  width: 4rem;
 }
 .email-text {
   font-size: 0.75rem;
