@@ -173,7 +173,7 @@ const testimonialsContent = ref([
           </div>
         </v-col>
       </v-row>
-      <div style="blackground: black">
+      <div style="background: black">
         <div
           :class="
             mdAndUp
@@ -327,14 +327,14 @@ const testimonialsContent = ref([
 .video-internal-container {
   width: 100%;
   height: 100%;
-  background-clip: content-box; /* support: IE9+ */
+  background-clip: content-box;
 }
 .videoreel-row {
   width: 95%;
   height: 95%;
 }
 .welcome-container {
-  border: solid 2px #474543;
+  border: solid 2px #191919;
   border-radius: 0px;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, #15150e 0%, #0b0a03 100%);
@@ -350,7 +350,7 @@ const testimonialsContent = ref([
 .video-container {
   border-radius: 0px;
   padding: 6px;
-  border: solid 2px #474543;
+  border: solid 2px #191919;
   background-clip: content-box;
 }
 .threed-video-container {
