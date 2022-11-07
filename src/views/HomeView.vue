@@ -327,7 +327,7 @@ const testimonialsContent = ref([
   border-radius: 0px;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, #15150e 0%, #0b0a03 100%);
-  padding: 8px;
+  padding: 6px;
   background-clip: content-box;
 }
 .welcome-container-mobile-height {
@@ -338,7 +338,7 @@ const testimonialsContent = ref([
 }
 .video-container {
   border-radius: 0px;
-  padding: 8px;
+  padding: 6px;
   border: solid 2px #474543;
   background-clip: content-box;
 }
