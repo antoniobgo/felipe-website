@@ -1,24 +1,14 @@
 # felipe-website
 
-## Project setup
+## Desenvolvimento de um site pessoal do tipo portfólio.
+
+### Link provisório:
 ```
-npm install
+Link provisório: https://felipe-website-1e521.web.app/
+
 ```
 
-### Compiles and hot-reloads for development
+### Ferramentas utilizadas:
 ```
-npm run serve
+Vue 3, Vuetify 3 Beta, Vue Router.
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
