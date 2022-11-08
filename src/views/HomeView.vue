@@ -442,6 +442,11 @@ const testimonialsContent = ref([
 }
 .about-button:hover {
   cursor: pointer;
+  width: 120px;
+  font-weight: 500;
+  height: 30px;
+  font-size: 1rem;
+  line-height: 1.1rem;
 }
 .mobile-about-button {
   width: 70px;
