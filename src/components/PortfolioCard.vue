@@ -23,7 +23,7 @@ const onHoverStyleObject = ref({
   <v-hover v-slot="{ isHovering, props }">
     <v-card
       :style="isHovering ? onHoverStyleObject : styleObject"
-      class="h-100 rounded-0"
+      class="h-100 rounded-0 huk"
       v-bind="props"
     >
       <div class="d-flex flex-column justify-end h-100" v-if="isHovering">

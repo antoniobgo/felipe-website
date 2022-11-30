@@ -80,71 +80,59 @@ const portfolioItems = [
 
 <template>
   <div class="motion">
-    <div class="">
-      <v-row justify="center" class="motion-container" no-gutters dense>
-        <v-col :cols="11" md="9">
-          <v-row no-gutters dense justify="center">
-            <v-col cols="12" md="8">
-              <v-row no-gutters dense justify="start">
-                <p class="title-text">MOTION</p>
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="8">
-                  <PortfolioCard :job="portfolioItems[0]" :cardHeight="310" />
-                </v-col>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[1]" :cardHeight="310" />
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[2]" :cardHeight="444" />
-                </v-col>
-                <v-col cols="12" md="8">
-                  <PortfolioCard :job="portfolioItems[3]" :cardHeight="444" />
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[4]" :cardHeight="310" />
-                </v-col>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[5]" :cardHeight="310" />
-                </v-col>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[6]" :cardHeight="310" />
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <PortfolioCard :job="portfolioItems[7]" :cardHeight="310" />
-                </v-col>
-                <v-col cols="12" md="8">
-                  <PortfolioCard :job="portfolioItems[8]" :cardHeight="310" />
-                </v-col>
-                <v-row>
-                  <v-col cols="12" md="4">
-                    <PortfolioCard :job="portfolioItems[9]" :cardHeight="310" />
-                  </v-col>
-                  <v-col cols="12" md="4">
-                    <PortfolioCard
-                      :job="portfolioItems[10]"
-                      :cardHeight="310"
-                    />
-                  </v-col>
-                  <v-col cols="12" md="4">
-                    <PortfolioCard
-                      :job="portfolioItems[11]"
-                      :cardHeight="310"
-                    />
-                  </v-col>
-                </v-row>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </div>
+    <v-row no-gutters justify="center" class="motion-container">
+      <v-col cols="11" md="9">
+        <v-row no-gutters justify="center">
+          <v-col cols="12" md="8">
+            <v-row no-gutters justify="start">
+              <p class="title-text">MOTION</p>
+            </v-row>
+            <v-row>
+              <v-col cols="12" md="8">
+                <PortfolioCard
+                  class="aue"
+                  :job="portfolioItems[0]"
+                  :cardHeight="310"
+                />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[1]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[2]" :cardHeight="444" />
+              </v-col>
+              <v-col cols="12" md="8">
+                <PortfolioCard :job="portfolioItems[3]" :cardHeight="444" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[4]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[5]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[6]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[7]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="8">
+                <PortfolioCard :job="portfolioItems[8]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[9]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[10]" :cardHeight="310" />
+              </v-col>
+              <v-col cols="12" md="4">
+                <PortfolioCard :job="portfolioItems[11]" :cardHeight="310" />
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
