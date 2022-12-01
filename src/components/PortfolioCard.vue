@@ -6,14 +6,14 @@ const job = ref(props.job);
 const cardHeight = ref(props.cardHeight);
 const styleObject = ref({
   backgroundImage:
-    "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), " +
+    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), " +
     `url(${require("@/assets/images/" + job.value.backgroundUrl)})`,
   minHeight: cardHeight.value + "px",
   backgroundSize: "cover",
 });
 const onHoverStyleObject = ref({
   backgroundImage:
-    "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), " +
+    "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), " +
     `url(${require("@/assets/images/" + job.value.backgroundUrl)})`,
   minHeight: cardHeight.value + "px",
   backgroundSize: "cover",
@@ -63,14 +63,6 @@ const onHoverStyleObject = ref({
 </template>
 
 <style>
-.portfolio-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/threed_bg.png");
-}
-.portfolio-background-onhover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("../assets/threed_bg.png");
-}
 .bottom-text-area {
   height: 72px;
 }

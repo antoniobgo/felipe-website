@@ -80,7 +80,7 @@ const portfolioItems = [
 <template>
   <div class="motion">
     <v-row justify="center" class="threed-container" no-gutters dense>
-      <v-col cols="11" md="9">
+      <v-col cols="11" md="10">
         <v-row no-gutters dense justify="center">
           <v-col cols="12" md="8">
             <v-row no-gutters dense justify="start">
@@ -93,16 +93,16 @@ const portfolioItems = [
               <v-col cols="12" md="8">
                 <PortfolioCard :job="portfolioItems[1]" :cardHeight="444" />
               </v-col>
-            </v-row>
-            <v-row>
+              <!-- </v-row> -->
+              <!-- <v-row> -->
               <v-col cols="12" md="8">
                 <PortfolioCard :job="portfolioItems[2]" :cardHeight="310" />
               </v-col>
               <v-col cols="12" md="4">
                 <PortfolioCard :job="portfolioItems[3]" :cardHeight="310" />
               </v-col>
-            </v-row>
-            <v-row>
+              <!-- </v-row> -->
+              <!-- <v-row> -->
               <v-col cols="12" md="4">
                 <PortfolioCard :job="portfolioItems[4]" :cardHeight="445" />
               </v-col>
