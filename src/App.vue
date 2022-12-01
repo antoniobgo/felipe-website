@@ -26,8 +26,12 @@ const onLogoClick = function () {
         class="d-flex w-100"
         :class="mdAndUp ? 'justify-space-between' : 'justify-space-between'"
       >
-        <div class="d-flex align-center" :class="mdAndUp ? 'ml-15' : 'ml-5'">
-          <div @click="onLogoClick" class="logo"></div>
+        <div
+          @click="onLogoClick"
+          class="d-flex align-center logo-name-area"
+          :class="mdAndUp ? 'ml-15' : 'ml-5'"
+        >
+          <div class="logo"></div>
           <p v-if="mdAndUp" class="pl-4 text-white app-bar-text">
             Felipe Miranda Gomes
           </p>
@@ -257,7 +261,7 @@ const onLogoClick = function () {
   height: 62px;
   width: 35px;
 }
-.logo:hover {
+.logo-name-area:hover {
   cursor: pointer;
 }
 .footer {
