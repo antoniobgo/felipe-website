@@ -4,6 +4,7 @@ import { defineProps, ref } from "vue";
 const props = defineProps(["job", "cardHeight"]);
 const job = ref(props.job);
 const cardHeight = ref(props.cardHeight);
+console.log(cardHeight);
 const styleObject = ref({
   backgroundImage:
     "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), " +

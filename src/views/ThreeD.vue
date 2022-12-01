@@ -1,5 +1,8 @@
 <script setup>
 import PortfolioCard from "@/components/PortfolioCard.vue";
+import { useDisplay } from "vuetify";
+
+const { mdAndUp } = useDisplay();
 
 const portfolioItems = [
   {
@@ -88,29 +91,50 @@ const portfolioItems = [
             </v-row>
             <v-row>
               <v-col cols="12" md="4">
-                <PortfolioCard :job="portfolioItems[0]" :cardHeight="444" />
+                <PortfolioCard
+                  :job="portfolioItems[0]"
+                  :cardHeight="mdAndUp ? '444' : '150'"
+                />
               </v-col>
               <v-col cols="12" md="8">
-                <PortfolioCard :job="portfolioItems[1]" :cardHeight="444" />
+                <PortfolioCard
+                  :job="portfolioItems[1]"
+                  :cardHeight="mdAndUp ? '444' : '150'"
+                />
               </v-col>
               <!-- </v-row> -->
               <!-- <v-row> -->
               <v-col cols="12" md="8">
-                <PortfolioCard :job="portfolioItems[2]" :cardHeight="310" />
+                <PortfolioCard
+                  :job="portfolioItems[2]"
+                  :cardHeight="mdAndUp ? '310' : '150'"
+                />
               </v-col>
               <v-col cols="12" md="4">
-                <PortfolioCard :job="portfolioItems[3]" :cardHeight="310" />
+                <PortfolioCard
+                  :job="portfolioItems[3]"
+                  :cardHeight="mdAndUp ? '310' : '150'"
+                />
               </v-col>
               <!-- </v-row> -->
               <!-- <v-row> -->
               <v-col cols="12" md="4">
-                <PortfolioCard :job="portfolioItems[4]" :cardHeight="445" />
+                <PortfolioCard
+                  :job="portfolioItems[4]"
+                  :cardHeight="mdAndUp ? '444' : '150'"
+                />
               </v-col>
               <v-col cols="12" md="4">
-                <PortfolioCard :job="portfolioItems[5]" :cardHeight="445" />
+                <PortfolioCard
+                  :job="portfolioItems[5]"
+                  :cardHeight="mdAndUp ? '444' : '150'"
+                />
               </v-col>
               <v-col cols="12" md="4">
-                <PortfolioCard :job="portfolioItems[6]" :cardHeight="445" />
+                <PortfolioCard
+                  :job="portfolioItems[6]"
+                  :cardHeight="mdAndUp ? '444' : '150'"
+                />
               </v-col>
             </v-row>
           </v-col>
