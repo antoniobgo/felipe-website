@@ -93,9 +93,8 @@ const portfolioItems = [
             <v-row>
               <v-col cols="12" md="8">
                 <PortfolioCard
-                  class="aue"
                   :job="portfolioItems[0]"
-                  :cardHeight="310"
+                  :cardHeight="mdAndUp ? '310' : '150'"
                 />
               </v-col>
               <v-col cols="12" md="4">

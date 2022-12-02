@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps, ref } from "vue";
+import { useDisplay } from "vuetify";
+
+const { mdAndUp } = useDisplay();
 
 const props = defineProps(["job", "cardHeight"]);
 const job = ref(props.job);
@@ -28,14 +31,29 @@ const onHoverStyleObject = ref({
       v-bind="props"
     >
       <div class="d-flex flex-column justify-end h-100" v-if="isHovering">
-        <div class="mb-5 ml-5">
-          <p class="text-left portfolio-card-font text-white">
+        <div :class="mdAndUp ? 'mb-5 ml-5' : 'mb-8 ml-8'">
+          <p
+            class="text-left"
+            :class="
+              mdAndUp ? 'portfolio-card-font' : 'mobile-portfolio-card-font'
+            "
+          >
             {{ job.jobName }}
           </p>
-          <p class="text-left portfolio-card-font text-white">
+          <p
+            class="text-left"
+            :class="
+              mdAndUp ? 'portfolio-card-font' : 'mobile-portfolio-card-font'
+            "
+          >
             {{ job.jobCompany }}
           </p>
-          <p class="text-left portfolio-card-font text-white">
+          <p
+            class="text-left"
+            :class="
+              mdAndUp ? 'portfolio-card-font' : 'mobile-portfolio-card-font'
+            "
+          >
             {{ job.softwareText }}
           </p>
         </div>
@@ -71,6 +89,13 @@ const onHoverStyleObject = ref({
   font-size: 0.875rem;
   letter-spacing: 0.156rem;
   line-height: 1.438rem;
+  color: #cdcdcd;
+}
+.mobile-portfolio-card-font {
+  font-size: 0.625rem;
+  letter-spacing: 0.156rem;
+  line-height: 1.15rem;
+  color: #cdcdcd;
 }
 .card-height {
   min-height: 19rem;
