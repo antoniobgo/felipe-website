@@ -82,12 +82,19 @@ const portfolioItems = [
 
 <template>
   <div class="motion">
-    <v-row justify="center" class="threed-container" no-gutters dense>
+    <v-row
+      justify="center"
+      :class="
+        mdAndUp ? 'threed-container-margins' : 'mobile-threed-container-margins'
+      "
+      no-gutters
+      dense
+    >
       <v-col cols="11" md="10">
         <v-row no-gutters dense justify="center">
           <v-col cols="12" md="8">
             <v-row no-gutters dense justify="start">
-              <p class="title-text">3D</p>
+              <p :class="mdAndUp ? 'title-text' : 'mobile-title-text'">3D</p>
             </v-row>
             <v-row>
               <v-col cols="12" md="4">
@@ -150,19 +157,27 @@ const portfolioItems = [
   width: 100%;
   height: 100%;
 }
-.threed-container {
+.threed-container-margins {
   padding-top: 5rem;
   margin-bottom: 10rem;
 }
+.mobile-threed-container-margins {
+  padding-top: 2rem;
+}
 .title-text {
-  font-family: Alata, sans-serif;
   font-size: 1.5rem;
-  color: #c8c8c8;
+  color: #cdcdcd;
   letter-spacing: 1rem;
   margin-bottom: 3rem;
 }
+.mobile-title-text {
+  font-size: 0.875rem;
+  color: #cdcdcd;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+  margin-left: 1.85rem;
+}
 .description-text {
-  font-family: Alata, sans-serif;
   font-size: 1rem;
   color: #858585;
   letter-spacing: 0.1rem;

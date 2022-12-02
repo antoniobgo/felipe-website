@@ -83,12 +83,20 @@ const portfolioItems = [
 
 <template>
   <div class="motion">
-    <v-row no-gutters justify="center" class="motion-container">
+    <v-row
+      no-gutters
+      justify="center"
+      :class="
+        mdAndUp ? 'motion-container-margins' : 'mobile-motion-container-margins'
+      "
+    >
       <v-col cols="11" md="9">
         <v-row no-gutters justify="center">
           <v-col cols="12" md="8">
             <v-row no-gutters justify="start">
-              <p class="title-text">MOTION</p>
+              <p :class="mdAndUp ? 'title-text' : 'mobile-title-text'">
+                MOTION
+              </p>
             </v-row>
             <v-row>
               <v-col cols="12" md="8">
@@ -177,16 +185,25 @@ const portfolioItems = [
   width: 100%;
   height: 100%;
 }
-.motion-container {
+.motion-container-margins {
   padding-top: 5rem;
   margin-bottom: 10rem;
 }
+.mobile-motion-container-margins {
+  padding-top: 2rem;
+}
 .title-text {
-  font-family: Alata, sans-serif;
   font-size: 1.5rem;
-  color: #c8c8c8;
+  color: #cdcdcd;
   letter-spacing: 1rem;
   margin-bottom: 3rem;
+}
+.mobile-title-text {
+  font-size: 0.875rem;
+  color: #cdcdcd;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+  margin-left: 1.85rem;
 }
 .description-text {
   font-family: Alata, sans-serif;
@@ -196,10 +213,6 @@ const portfolioItems = [
 }
 .description-container {
   padding-top: 2rem;
-}
-.fuckingtest {
-  /* width: 19.3rem; */
-  margin-bottom: 200px;
 }
 .card-2 {
   /* width: 40rem; */
