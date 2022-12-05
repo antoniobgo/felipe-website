@@ -191,6 +191,7 @@ const portfolioItems = [
 }
 .mobile-motion-container-margins {
   padding-top: 2rem;
+  margin-bottom: 3rem;
 }
 .title-text {
   font-size: 1.5rem;
