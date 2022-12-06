@@ -39,23 +39,41 @@ const { mdAndUp } = useDisplay();
               </p>
               <v-row class="mt-5" no-gutters>
                 <v-col cols="12">
-                  <p class="subtitle-text">Name</p>
+                  <p
+                    :class="mdAndUp ? 'subtitle-text' : 'mobile-subtitle-text'"
+                  >
+                    Name
+                  </p>
                   <v-text-field
                     bg-color="#D9D9D9"
                     variant="outlined"
                     density="compact"
                   ></v-text-field>
-                  <p class="subtitle-text">Email Address</p>
+                  <p
+                    :class="mdAndUp ? 'subtitle-text' : 'mobile-subtitle-text'"
+                  >
+                    Email Address
+                  </p>
                   <v-text-field
                     bg-color="#D9D9D9"
                     variant="outlined"
                     density="compact"
                   ></v-text-field>
-                  <p class="subtitle-text">Message</p>
-                  <v-textarea bg-color="#D9D9D9"> </v-textarea>
+                  <p
+                    :class="mdAndUp ? 'subtitle-text' : 'mobile-subtitle-text'"
+                  >
+                    Message
+                  </p>
+                  <v-textarea bg-color="#D9D9D9" density="compact" hide-details>
+                  </v-textarea>
                   <v-btn
                     flat
-                    class="font-menu about-button text-black mb-15 mt-3"
+                    class="text-black mb-16 rounded-0"
+                    :class="
+                      mdAndUp
+                        ? 'submit-button mt-10'
+                        : 'mobile-submit-button mt-3'
+                    "
                     color="#D2B100"
                     >submit</v-btn
                   >
@@ -142,5 +160,25 @@ const { mdAndUp } = useDisplay();
   letter-spacing: 0.038rem;
   color: #858585;
   line-height: 1.7rem;
+}
+.mobile-subtitle-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.038rem;
+  color: #858585;
+  line-height: 1.1rem;
+  margin-bottom: 2px;
+}
+.submit-button {
+  max-height: 25px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.28rem;
+}
+.mobile-submit-button {
+  max-height: 25px;
+  padding: 0 7px 0 9px;
+  font-size: 0.6rem;
+  line-height: 0.78rem;
+  letter-spacing: 0.28rem;
 }
 </style>
