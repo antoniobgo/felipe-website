@@ -1,34 +1,55 @@
 <script setup>
-// @ is an alias to /src
+import { useDisplay } from "vuetify";
+
+const { mdAndUp } = useDisplay();
 </script>
 
 <template>
   <div class="contact">
     <div class="contact-container">
       <v-row justify="center">
-        <v-col cols="11" md="4">
+        <v-col cols="10" md="4">
           <v-card variant="outlined" style="border-width: 0">
             <v-card-title>
-              <p class="title-text">CONTACT</p>
+              <p :class="mdAndUp ? 'title-text' : 'mobile-title-text'">
+                CONTACT
+              </p>
             </v-card-title>
             <v-card-text>
-              <p class="description-text">
-                Send an email to felipearaujodemirandagomes@gmail.com or fill
-                out the form below.
+              <p
+                :class="
+                  mdAndUp ? 'description-text' : 'mobile-description-text'
+                "
+              >
+                Send an email to
+              </p>
+              <p
+                :class="
+                  mdAndUp ? 'description-text' : 'mobile-description-text'
+                "
+              >
+                felipearaujodemirandagomes@gmail.com
+              </p>
+              <p
+                :class="
+                  mdAndUp ? 'description-text' : 'mobile-description-text'
+                "
+              >
+                or fill out the form below.
               </p>
               <v-row class="mt-5" no-gutters>
                 <v-col cols="12">
                   <p class="subtitle-text">Name</p>
                   <v-text-field
                     bg-color="#D9D9D9"
-                    dense
                     variant="outlined"
+                    density="compact"
                   ></v-text-field>
                   <p class="subtitle-text">Email Address</p>
                   <v-text-field
                     bg-color="#D9D9D9"
-                    dense
                     variant="outlined"
+                    density="compact"
                   ></v-text-field>
                   <p class="subtitle-text">Message</p>
                   <v-textarea bg-color="#D9D9D9"> </v-textarea>
@@ -44,26 +65,13 @@
           </v-card>
         </v-col>
       </v-row>
-      <!-- <v-row class="contact-container" no-gutters>
-      <v-col cols="4">
-        <v-row justify="start">
-          <p class="title-text">CONTACT</p>
-        </v-row>
-        <v-row no-gutters>
-          <p class="description-text">
-            Send an email to felipearaujodemirandagomes@gmail.com or fill out
-            the form below.
-          </p>
-        </v-row>
-      </v-col>
-    </v-row> -->
     </div>
   </div>
 </template>
 
 <style scoped>
-#input-47 {
-  padding: 0px;
+.testina {
+  padding: 0px !important;
 }
 .contact {
   background-color: #101010;
@@ -83,11 +91,21 @@
   line-height: 2rem;
   margin-bottom: 1rem;
 }
+.mobile-title-text {
+  font-size: 0.875rem;
+  color: #cdcdcd;
+  letter-spacing: 0.3rem;
+}
 .description-text {
   font-size: 1rem;
   color: #858585;
   letter-spacing: 0.03rem;
   line-height: 2rem;
+}
+.mobile-description-text {
+  font-size: 0.6rem;
+  color: #cdcdcd;
+  line-height: 1.1rem;
 }
 .description-container {
   padding-top: 2rem;
